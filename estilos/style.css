@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* classe . || id # */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: black;
+}
+pre > code{
+    font-family: monospace;
+    font-weight: bold;
+    color: gray;
+    font-size: 1.3em;
+    padding: -20px;
+}
+
+#html5{background-color: orangered; transition:.2s}
+#css3{background-color: rgb(0, 135, 224); transition:.2s}
+#javas{background-color: rgb(240, 188, 17); transition:.2s}
+#htcs{background-color: rgb(25, 201, 148); transition:.2s}
+#htjs{background-color: rgb(255, 145, 0); transition:.2s}
+#csjs{background-color: rgb(204, 0, 255); transition:.2s}
+
+header{
+    width: 100vw;
+    height: fit-content;
+    background-color: rgb(73, 94, 73);
+    color: white;
+    padding: 10px;
+    outline: 1px solid black;
+}
+header{
+    text-align: center;
+}
+nav{
+    width: fit-content;
+}
+.row > a{
+    cursor: pointer;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: center;
+}
+.row > a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.137);
+ }
+.row > a:hover{
+     text-decoration: underline;
+     background-color: rgb(255, 255, 255);
+     border-radius: 0px;
+     transition: .1s;
+     outline: 2px solid white;
+     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.603);
+}
+.column{
+    display: flex;
+    flex-direction: row;
+ }
+#menu{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100vh;
+    background-color: rgb(102, 102, 102)/*rgb(145, 10, 10);*/
+}
+#menu > a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 5px 20px;
+    border-bottom: 1px solid black;
+    background-color: gray;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.267);
+    cursor: pointer;
+    transition: 3s;
+}
+#menu > a:hover{
+    text-decoration: underline;
+    background-color: rgb(153, 139, 126);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.content{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgb(155, 155, 155);
+    border-bottom: 1px solid rgb(155, 155, 155);
+}
+footer{
+    position: absolute;
+    margin-top: auto;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgb(73, 94, 73);
+    color: white;
+    padding: 25px;
+    outline: 1px solid black;
+}
+footer > p{
+    width: 30vw;
+}

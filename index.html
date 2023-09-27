@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório Códigos</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body onload="clean()">
+    <header>
+        <h1 id="title">Repositório de códigos - [frontend]</h1>
+        <nav>
+            <div class="row">
+                <a onclick="menu(1)" id="html5">HTML5</a>
+                <a onclick="menu(2)" id="css3">CSS3</a>
+                <a onclick="menu(3)" id="javas">JAVASCRIPT</a>
+                <a onclick="menu(4)" id="htcs">HTML5 + CSS</a>
+                <a onclick="menu(5)" id="htjs">HTML5 + JAVASCRIPT</a>
+                <a onclick="menu(6)" id="csjs">CSS + JAVASCRIPT</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="column">
+            <div id="menu" class="a">
+                <a href="pages/html/inicializacao.html" target="cont">Inicialização</a>
+                <a href="pages/html/caracteres.html" target="cont">Caracteres + Emojis</a>
+                <a href="pages/html/tipografia.html" target="cont">Tipografia</a>
+            </div>
+            <div id="menu" class="b">
+                <a>Inicialização</a>
+                <a>Caracteres especiais</a>
+            </div>
+            <div id="menu" class="c">
+                <a>Codigo de caracteres</a>
+            </div>
+            <div id="menu" class="d">
+                <a>identação</a>
+            </div>
+            <div id="menu" class="e">
+                <a>classe e id</a>
+            </div>
+            <div id="menu" class="f">
+                <a>cor dinamica</a>
+            </div>
+            <div class="content">
+                <iframe src="pages/introducao.html" frameborder="0" name="cont" id="cont"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h1>Siga-me:</h1>
+        <p>Projeto dedicado aos meus estudos pessoais, utilizando HTML5, CSS3 E JAVASCRIPT;</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
