@@ -8,9 +8,7 @@
 <body>
 <pre>
 <code id="data"><!--&lt;&gt;-->
-<strong>&lt;HTML5 : LISTAS&gt; </strong>
-
-<strong>&lt;ol&gt;...&lt;/ol&gt;</strong> :: Listas ordenadas por caracteres
+<strong>&lt;HTML5 : LISTAS&gt; </strong><hr><strong>&lt;ol&gt;...&lt;/ol&gt;</strong> :: Listas ordenadas por caracteres
 <strong>&lt;ol type="1"&gt;</strong> :: Sequencia numérica 1,2,3...
 <strong>&lt;ol type="a"&gt;</strong> :: Sequencia minuscula a,b,c...
 <strong>&lt;ol type="A"&gt;</strong> :: Sequencia MAIUSCULA A,B,C...
@@ -25,18 +23,13 @@
 
 <strong>&lt;li&gt;item&lt;/li&gt;</strong> :: Tanto em ol quando em ul,
 utilize essa tag dentro para definir os itens que estarão 
-contidos dentro da lista.
-
-Atualmente, a tag final com barra é dispensavel se preferir.
-
-<strong>&lt;dl&gt;...&lt;/dl&gt;</strong> :: Lista de definição
+contidos dentro da lista - tag final com barra é dispensavel.
+<hr><strong>&lt;dl&gt;...&lt;/dl&gt;</strong> :: Lista de definição
 <strong>&lt;dt&gt;...&lt;/dt&gt;</strong> :: Termos
 <strong>&lt;dd&gt;...&lt;/dd&gt;</strong> :: Definições
-
 <strong>Dentro de dl, voce coloca os termos, e suas definições abaixo,
 igual no exemplo a seguir ::
-</strong>
-&lt;dl&gt;
+</strong>&lt;dl&gt;
     &lt;dt&gt;Veiculos&lt;/dt&gt;
     &lt;dd&gt;Moto&lt;/dd&gt;
     &lt;dd&gt;Carro&lt;/dd&gt;
@@ -45,7 +38,19 @@ igual no exemplo a seguir ::
 &lt;/dl&gt;
 
 <strong>Essa lista ficará assim</strong> ::
-<dl><dt>Veiculos</dt><dd>Moto</dd><dd>Carro</dd><dt>Marca</dt><dd>Honda</dd></dl>
+<dl><dt>Veiculos</dt><dd>Moto</dd><dd>Carro</dd><dt>Marca</dt><dd>Honda</dd></dl><strong><hr>&lt;input list="browsers" name="browser"/&gt;
+&lt;datalist id="browsers" placeholder="clique aqui"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Microsoft Edge"&gt;
+&lt;/datalist&gt;
+
+</strong><strong>Essa lista ficará assim</strong> ::
+
+<input list="browsers" name="browser" placeholder="clique aqui"/>
+<datalist id="browsers">
+    <option value="Chrome">
+    <option value="Microsoft Edge">
+</datalist>Reage conforme a pesquisa.
 
 </code>
 </pre>
