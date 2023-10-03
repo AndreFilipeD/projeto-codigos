@@ -8,15 +8,33 @@
 <body>
     <pre>
         <code id="data"><!--&lt;&gt;-->
-<strong>&lt;CSS3 : CAIXA&gt;</strong><hr><strong>&lt;TAMANHO&gt;</strong>
+<strong>&lt;CSS3 : CAIXAS&gt;</strong><hr><strong>&lt;DISPLAY&gt;</strong>
 
-<strong>width: 100px;</strong> :: largura
-<strong>height: 100px;</strong> :: altura
+<strong>display: block;</strong> :: transforma elemento em block-level
+<strong>display: inline;</strong> :: transforma elemento em inline-level
+<strong>display: none;</strong> :: esconde o elemento
+<strong>display: inline;</strong> :: transforma elemento em flex
+<hr><strong>&lt;TAMANHO&gt;</strong>
 
-<strong>padding: 50px</strong> :: preenchimento interno
-<strong>margin: 50px</strong> :: espaçamento externo
+<strong>&lt;Tipos de manipulação&gt;</strong>
+<strong>100px</strong> :: manipulação em pixel.
+<strong>100%</strong> :: preenche o espaço disponivel da caixa em 100%.
+<strong>100vw</strong> :: tamanho = 100% da proporção horizontal da tela.
+<strong>100vh</strong> :: tamanho = 100% da proporção vertical da tela.
+
+<strong>width: 100px;</strong> :: largura.
+<strong>height: 100px;</strong> :: altura.
+
+<strong>min-width:50px e max-height:500px</strong> :: Define limites para a
+distorção da caixa.
+
+<strong>padding: 50px</strong> :: preenchimento interno.
+<strong>margin: 50px</strong> :: espaçamento externo.
 
 <hr><strong>&lt;BORDAS&gt;</strong>
+
+<strong>Tipos de bordas:</strong> solid, groove, dashed, dotted, double, ridge,
+inset, outset.
 
 <strong>border: 1px solid black;</strong> :: adiciona uma linha
 de 1px solida e preta na caixa, tem outras propriedades...
