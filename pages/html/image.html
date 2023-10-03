@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+<pre>
+<code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML5 : IMAGENS&gt; </strong><hr>
+<strong>&lt;img src="endereco/arquivo.png" alt="descrição ao tocar"&gt;</strong> ::
+Importa uma imagem de um diretório
+
+<strong>&lt;img src="https://link-imagem-web.com/aqui.png" alt="descrição"&gt;</strong> ::
+Importa a imagem hospedada online de um link
+
+<hr><strong>&lt;IMAGENS DINÂMICAS&gt; </strong>
+
+<strong>&lt;picture&gt;</strong> :: tag para trabalhar com imagens responsivas,
+ela deve envelopar o conteudo abaixo.
+
+<strong>&lt;source media="(max-width: 750px)" srcset="imagens/peq.png" type="image/png"&gt;</strong> ::
+Se o tamanho for no maximo 750px, importe deste endereço 
+
+<strong>&lt;source media="(max-width: 750px)" srcset="imagens/peq.png" type="image/png"&gt;</strong> ::
+Caso contrario, se o maximo for 1050px, importe esse endereço
+
+<strong>&lt;img src="imagens/gra.png" alt="imagem flexivel"&gt;</strong> ::
+Se nenhuma das 2 acima aparecer, esse img normal mostrará essa,
+que é maior que as outras, gerando um dinamismo na página.
+
+<strong>&lt;/picture&gt;</strong>
+</code>
+</pre>
+</body>
+</html>
