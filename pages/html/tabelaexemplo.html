@@ -8,34 +8,135 @@
         table{
             border-collapse: collapse;
         }        
-        td{
+        td, th{
             border: 1px solid black;
             margin: 0px;
             padding: 5px;
+        }
+        th{
+            background-color: rgb(192, 192, 192);
         }
     </style>
 </head>
 <body>
 <pre>
 <code id="data"><!--&lt;&gt;-->
-<strong>&lt;HTML5 : EXEMPLOS DE TABELAS&gt; </strong><hr><strong>&lt;EXEMPLO 1&gt;</strong>
-
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td&gt;125&lt;/td&gt;
-        &lt;td&gt;275&lt;/td&gt;
-        &lt;td&gt;315&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-
+<strong>&lt;HTML5 : EXEMPLOS DE TABELAS&gt; </strong><hr><strong>&lt;EXEMPLO DE TABELA PEQUENA&gt;</strong>
 <table>
     <tr>
         <td>125</td>
         <td>275</td>
         <td>315</td>
     </tr>
+</table>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;125&lt;/td&gt;
+        &lt;td&gt;275&lt;/td&gt;
+        &lt;td&gt;315&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+<hr><strong>&lt;EXEMPLO DE TABELA GRANDE&gt;</strong>
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="2">Area</th>
+            <th rowspan="2" scope="col">disciplinas</th>
+            <th colspan="2" scope="colgroup">notas</th>
+            <th rowspan="2" scope="col">média</th>
+        </tr>
+        <tr>
+            <th scope="col">nota 1</th>
+            <th scope="col">nota 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th rowspan="2" scope="rowgroup">Exatas</th>
+            <td scope="row">Matematica</td>
+            <td>5.5</td>
+            <td>8.4</td>
+            <td>6.95</td>
+        </tr>
+        <tr>
+            <td scope="row">Fisica</td>
+            <td>9.0</td>
+            <td>9.5</td>
+            <td>9.25</td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="4">Media de Exatas</th>
+            <td>7.825</td>
+        </tr>
+        <tr>
+            <th rowspan="2" scope="rowgroup">Humanas</th>
+            <td scope="row">História</td>
+            <td>4.2</td>
+            <td>6.8</td>
+            <td>5.5</td>
+        </tr>
+        <tr>
+            <td scope="row">Geografia</td>
+            <td>8.0</td>
+            <td>7.0</td>
+            <td>7.5</td>
+        </tr>
+        <tr>
+            <th colspan="4" scope="row">Media de Humanas</th>
+            <td>6.5</td>
+        </tr>
+    </tbody>
 </table>
-<hr><strong>&lt;EXEMPLO 2&gt;</strong> :: Sem tag table a partir dessa p/ economizar espaço
+<!-- PLANILHA EM HTML -->&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2"&gt;Area&lt;/th&gt;
+            &lt;th rowspan="2" scope="col"&gt;disciplinas&lt;/th&gt;
+            &lt;th colspan="2" scope="colgroup"&gt;notas&lt;/th&gt;
+            &lt;th rowspan="2" scope="col"&gt;média&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;nota 1&lt;/th&gt;
+            &lt;th scope="col"&gt;nota 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2" scope="rowgroup"&gt;Exatas&lt;/th&gt;
+            &lt;td scope="row"&gt;Matematica&lt;/td&gt;
+            &lt;td&gt;5.5&lt;/td&gt;
+            &lt;td&gt;8.4&lt;/td&gt;
+            &lt;td&gt;6.95&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td scope="row"&gt;Fisica&lt;/td&gt;
+            &lt;td&gt;9.0&lt;/td&gt;
+            &lt;td&gt;9.5&lt;/td&gt;
+            &lt;td&gt;9.25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th colspan="4" scope="row"&gt;Media de Exatas&lt;/th&gt;
+            &lt;td&gt;7.825&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2" scope="rowgroup"&gt;Humanas&lt;/th&gt;
+            &lt;td scope="row"&gt;História&lt;/td&gt;
+            &lt;td&gt;4.2&lt;/td&gt;
+            &lt;td&gt;6.8&lt;/td&gt;
+            &lt;td&gt;5.5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td scope="row"&gt;Geografia&lt;/td&gt;
+            &lt;td&gt;8.0&lt;/td&gt;
+            &lt;td&gt;7.0&lt;/td&gt;
+            &lt;td&gt;7.5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th colspan="4" scope="row"&gt;Media de Humanas&lt;/th&gt;
+            &lt;td"&gt;6.5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
 
 </code>
 </pre>
