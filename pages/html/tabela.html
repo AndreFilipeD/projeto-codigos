@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }        
+        td{
+            border: 1px solid black;
+            margin: 0px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+<code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML5 : TAGS TABELAS&gt; </strong><hr><strong>&lt;TODAS AS TAGS&gt;</strong>
+
+<strong>&lt;table&gt;...&lt;/table&gt;</strong> :: Cria a tabela,
+todo o conteudo de tabela deve estar dentro dessa tag.
+
+<strong>&lt;thead&gt;...&lt;/&gt;&lt;tbody&gt;...&lt;/&gt;&lt;tfoot&gt;...&lt;/&gt;</strong> :: Como o header,
+main e o footer da pagina web, elas servem para organizar o
+conteudo da tabela de maneira semantica e organizada.
+
+<strong>&lt;tr&gt;...&lt;tr/&gt;</strong> :: Define uma linha na
+tabela para todo conteudo que estiver dentro.
+
+<strong>&lt;td&gt;...&lt;td/&gt;</strong> :: Define o conteudo dentro da celula
+na tabela, que deverá estar dentro de uma linha &lt;tr&gt;.
+
+<strong>&lt;th&gt;...&lt;th/&gt;</strong> :: Define celula de titulos semanticamente
+dentro da tabela, e deverá estar dentro de uma linha &lt;tr&gt;.
+<hr><strong>&lt;ROWSPAN E COLSPAN&gt;</strong>
+
+<strong>&lt;td rowspan="2"&gt;</strong> 75 &lt;/td&gt;</strong> :: Faz com que essa celula ocupe 
++1 linha abaixo, se fosse colocado em rowspan="3", ele ocuparia
++2 linhas abaixo, e assim sucessivamente...
+
+<strong>&lt;td colspan="2"&gt; 35 &lt;/td&gt;</strong> :: Faz com que essa celula ocupe 
++1 coluna a direita, se fosse colocado em rowspan="3", ele ocuparia
++2 colunas a direita, e assim sucessivamente...
+
+<strong>&lt;th rowspan="2"&gt; 75 &lt;/th&gt; e &lt;th colspan="2"&gt; 75 &lt;/th&gt;</strong> :: faz a mesma
+coisa das de cima, só que semanticamente <strong>&lt;th&gt;</strong> é para títulos.
+<hr><strong>&lt;SCOPE ROW E COL&gt;</strong>
+
+<strong>&lt;th colspan="4" scope="row"&gt;&lt;/th&gt;</strong> :: o comando <strong>scope="row"</strong> diz
+que esse titulo <strong>&lt;th&gt;</strong> está semanticamente apresentando o conteudo
+da linha.
+
+<strong>&lt;th rowspan="3" scope="col"&gt;&lt;/th&gt;</strong> :: o comando <strong>scope="col"</strong> diz
+que esse titulo <strong>&lt;th&gt;</strong> está semanticamente apresentando o conteudo
+das colunas á direita.
+<hr><strong>&lt;SCOPE ROWGROUP E COLGROUP&gt;</strong>
+
+<strong>&lt;th rowspan="2" scope="rowgroup"&gt;&lt;/th&gt;</strong> :: o comando <strong>scope="rowgroup"</strong>
+é igual o "row" e o "col", mas não apresenta conteudo, e sim um 
+conjunto de titulos abaixo da celula.
+
+<strong>&lt;th rowspan="2" scope="colgroup"&gt;&lt;/th&gt;</strong> :: o comando <strong>scope="colgroup"</strong>
+é igual o "row" e o "col", mas não apresenta conteudo, e sim um 
+conjunto de titulos á direita da celula.
+
+</code>
+</pre>
+</body>
+</html>
