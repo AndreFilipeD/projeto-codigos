@@ -10,6 +10,9 @@
             width: 100px;
             height: 25px;
         }
+        tbody tr:nth-child(2n){
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
@@ -27,12 +30,70 @@
         <td style="text-align: right;">137</td>
     </tr>
 </table>
-<strong>text-align:center;</strong>
+<strong>text-align: center;</strong>
 <table>
     <tr>
         <td style="text-align:center;">137</td>
     </tr>
 </table>
+<strong>vertical-align: top;</strong>
+<table>
+    <tr>
+        <td style="vertical-align: top;">137</td>
+    </tr>
+</table>
+<strong>vertical-align: bottom;</strong>
+<table>
+    <tr>
+        <td style="vertical-align: bottom;">137</td>
+    </tr>
+</table>
+<strong>vertical-align: middle;</strong>
+<table>
+    <tr>
+        <td style="vertical-align: middle;">137</td>
+    </tr>
+</table>
+<strong><hr><strong>&lt;Criando um efeito zebrado&gt;</strong>
+
+tbody tr:nth-child(2n){
+    background-color: lightgray;
+}</strong>
+use no argumento da função :: 2n ou odd ou even;
+
+<table style="border-collapse: collapse;">
+    <tbody>
+        <tr>
+            <td>137</td>
+        </tr>
+        <tr>
+            <td>242</td>
+        </tr>
+        <tr>
+            <td>389</td>
+        </tr>
+        <tr>
+            <td>412</td>
+        </tr>
+        <tr>
+            <td>567</td>
+        </tr>  
+    </tbody>
+</table><hr><strong>&lt;Fixar Cabeçalho com scroll da tela&gt;
+
+table{
+    position: relative;
+}
+thead > tr > th{
+    position: sticky;
+    top:0;
+    background-color:darkgray;
+}
+</strong>
+:: esse background color precisa ter a mesma
+cor do th inicial, caso contrario ele ficará com
+transparência.
+
         </code>
     </pre>
 </body>

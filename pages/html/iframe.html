@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+<pre>
+<code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML5 : IFRAME&gt; </strong><hr><strong>&lt;iframe src="pagina01.html" frameborder="0" height="500" width="500"&gt;
+    Link alternativo ou mensagem de incompatibilidade;
+&lt;/iframe&gt; :: </strong>Permite criar uma caixa com uma pagina web dentro.
+
+<strong>Online</strong> :: se não houver bloqueio de segurança
+<strong>Offline</strong> :: de algum diretório pessoal<hr>
+<strong>Rodando esse mesmo site em um Iframe</strong> ::
+<iframe src="../../index.html" frameborder="0" height="100" width="500">
+    Link alternativo ou mensagem de incompatibilidade;
+</iframe>
+
+<strong>Escrevendo dentro do iframe sem criar uma nova página</strong> ::
+<strong>
+&lt;iframe srcdoc="&lt;h1&gt;Titulo&lt;/h1&gt;&lt;p&gt;Estou escrevendo dentro do iframe!!&lt;/p&gt;"
+frameborder="1" height="100" width="300"&gt;
+</strong>   Link alternativo ou mensagem de incompatibilidade;
+<strong>&lt;/iframe&gt;</strong>
+
+<iframe frameborder="1" srcdoc="<h1>Titulo</h1><p>Estou escrevendo dentro do iframe!!</p>" height="100" width="300">
+    Link alternativo ou mensagem de incompatibilidade;
+</iframe><hr><strong><strong>Utilize em seu iframe para configurar sua segurança</strong> ::
+
+&lt;iframe src="pag01.html" referrerpolicy="no-referrer" sandbox="sandbox"&gt;</strong>
+    Link alternativo ou mensagem de incompatibilidade;
+<strong>&lt;/iframe&gt;</strong>
+
+<strong>sandbox="allow-scripts"</strong> :: permite o uso de scripts no iframe;
+
+<strong>sandbox="allow-same-origin"</strong> :: Sem limites contanto que no diretório origem;
+
+<strong>sandbox="allow-forms"</strong> :: Permite a manipulação de formulários.
+<hr>
+
+</code>
+</pre>
+</body>
+</html>

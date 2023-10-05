@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }        
+        td, th{
+            border: 1px solid black;
+            margin: 0px;
+            padding: 5px;
+        }
+        th{
+            background-color: rgb(192, 192, 192);
+        }
+    </style>
+</head>
+<body>
+<pre>
+<code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML5 : TAGS FORMULÁRIOS&gt; </strong><hr><strong>&lt;form action="cadastro.js" autocomplete="on" method="get"&gt;...&lt;/form&gt;</strong> ::
+envelopa o formulário ; Action roda o script após o envio do formulário.
+
+<strong>method="get"</strong> ou <strong>"post"</strong>, no qual get mostrará os dados do formulário na URL,
+ajudando caso queira compartilhar link, e post ocultará esses dados, que
+ainda podem ser encontrados.. se quiser segurança precisa aprender HTTPS.
+
+<strong>autocomplete="on"</strong> ou <strong>"off"</strong> retira ou coloca aquela caixa de
+sugestão de informações previamente já escritas.<hr><strong>&lt;label for="inome"&gt;Nome:&lt;/label&gt;</strong> :: Rótulo do input, vinculado pelo for e id
+do input, no caso label for="inome" e input id="inome";
+<strong>&lt;input type="text" name="nome" id="inome"&gt;</strong> :: Clicar no label seleciona input.
+<strong>&lt;input type="text" required&gt;</strong> :: só libera envio formulário após preenchido.
+<strong>&lt;input type="text" minlenght="5"&gt;</strong> :: Só libera tendo o minimo exigido.
+<strong>&lt;input type="text" maxlenght="15"&gt;</strong> ::  Só libera até o maximo exigido.
+<strong>&lt;input type="text" size="10"&gt;</strong> :: Não trava, apenas ajusta tamanho da celula.
+<strong>&lt;input type="text" placeholder="Digite Aqui"&gt;</strong> :: Palavra instrucional na caixa.
+<hr><strong>&lt;INPUT TYPES&gt;</strong>
+
+<strong>&lt;input type="text"&gt;</strong><input type="text"> :: Texto
+<strong>&lt;input type="number"&gt;</strong><input type="number"> :: Numero
+<strong>&lt;input type="email"&gt;</strong><input type="email"> :: E-mail
+<strong>&lt;input type="password"&gt;</strong><input type="password"> :: Senha
+<strong>&lt;input type="search"&gt;</strong><input type="search"> :: Pesquisa
+<strong>&lt;input type="tel"&gt;</strong><input type="tel"> :: Telefone
+<strong>&lt;input type="url"&gt;</strong><input type="utl"> :: Link url
+<strong>&lt;input type="button" value="click"&gt;</strong><input type="button" value="click"> :: Botão
+<strong>&lt;input type="reset"&gt;</strong><input type="reset"> :: Limpar
+<strong>&lt;input type="submit"&gt;</strong><input type="submit"> :: Enviar
+<strong>&lt;input type="file"&gt;</strong><input type="file"> :: Enviar Arquivo
+<strong>&lt;input type="image" src="here.png"&gt;</strong><input type="image" src="../../images/smiley.png" style="vertical-align: middle;"> :: Imagem Interativa
+<strong>&lt;input type="color"&gt;</strong><input type="color"> :: Selecionar Cor
+<strong>&lt;input type="range"&gt;</strong><input type="range"> :: Tamanho
+<strong>&lt;input type="checkbox"&gt;</strong><input type="checkbox"> :: CheckBox
+<strong>&lt;input type="radio"&gt;</strong><input type="radio"> :: Radio
+<strong>&lt;input type="date"&gt;</strong><input type="date"> :: Data
+<strong>&lt;input type="time"&gt;</strong><input type="time"> :: Tempo
+<strong>&lt;input type="week"&gt;</strong><input type="week"> :: Semana
+<strong>&lt;input type="month"&gt;</strong><input type="month"> :: Mês
+<strong>&lt;input type="datetime-local"&gt;</strong><input type="datetime-local"> :: Data/Hora/Calendário
+<strong>&lt;input type="hidden"&gt;</strong><input type="hidden"> :: Esconder
+
+</code>
+</pre>
+</body>
+</html>
