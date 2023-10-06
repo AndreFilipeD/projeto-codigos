@@ -2,21 +2,44 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <strong>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </strong>
     <title>introdução</title>
 </head>
 <body>
     <pre>
         <code id="data">
-<strong>&lt;JS : ARVORE DOM&gt;</strong><hr><strong>&lt;DECLARAÇÃO&gt;</strong>
+<strong>&lt;JS : ARVORE DOM&gt;</strong><hr><strong>&lt;RAMIFICAÇÃO&gt;</strong>
 
 <strong>var = window.</strong>[location ou document ou history]
 <strong>document.</strong>html(opcional).[head ou body]
 <strong>head.</strong>[meta ou title]
 <strong>body.</strong>[h1 ou p ou div ou nav ou article ...]<hr><strong>&lt;ATRIBUIÇÃO DE ELEMENTOS&gt;</strong>
 
+<strong>getElementsByClassName('group')</strong> :: Pegar pela classe
+<strong>getElementsByTagName('this')</strong> :: Pegar pelo nome
+<strong>getElementsByName('that')</strong> :: Pegar pela classe
+<strong>getElementsById('data')</strong> :: Pegar pelo id #
+<strong>querySelector('div#msg')</strong> :: Pegar pelo id #
+<strong>querySelector('div.msg')</strong> :: Pegar pela classe .
+<strong>querySelector('#msg')</strong> ou <strong>querySelector('#msg')</strong> :: resumo;
+
 <strong>var paragrafo = window.document.getElementById('parag')</strong> ::
-coletamos o parágrafo para ser manipulado em javascript
+Coletamos o parágrafo para ser manipulado em javascript.
+
+<strong>var p1 = window.document.getElementsByTagName('p')[2]</strong> ::
+guarda o 2º elemento com a tag p na variavel p1.<hr><strong>&lt;MANUPULAÇÃO DE ELEMENTOS&gt;</strong>
+após usar o getElement(s) ::
+
+<strong>p1.style.color = blue;</strong> :: Manipula estilo do elemento recebido.
+
+<strong>var corpo = window.document.body</strong> :: Manipula cor de fundo de body
+<strong>corpo.style.background = 'black'</strong>
+
+<strong>window.documentgetElementById('msg').innerText = 'olá'</strong> ::
+Manipulação sem a necessidade de utilizar variavel
+
 
 </code>
 </pre>
