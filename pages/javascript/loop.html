@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : LOOPS&gt; </strong><hr><strong>&lt;LOOPS LÓGICOS&gt;</strong>
+
+Para [ESSA SITUAÇÃO], faça [isso];
+<strong>for(var i = 0; i &lt; 100; i++){
+    process()
+}</strong>
+
+Enquanto [CONDIÇÃO] for verdadeira, faça [isso];
+<strong>while(data!=10 && info>100){verdadeira;
+    process()
+}</strong>
+
+Faça [isso] enquanto [CONDIÇÃO] for verdadeira;
+<strong>do{ 
+    process()
+}while(speed <= 100);</strong><hr><strong>&lt;ATUALIZAÇÃO TEMPORAL&gt;</strong>
+
+A cada 1 segundo, faça isso ::<strong>
+var interval = setInterval(function(){
+    Process()
+},1000)</strong>
+
+Supondo que sec = 10, em 10 segundos essa função vai
+encerrar o processo de contagem acima ::<strong>
+setTimeout(function(){
+    clearInterval(interval)
+},sec*1000)</strong><hr><strong>&lt;LOOP INDEFINIDO&gt;</strong>
+
+Loop temporal infinito ::<strong>
+const loop = setInterval((event) => {
+    process()
+})</strong>
+
+<strong>clearInterval(loop)</strong> :: irá interromper o loop quando necessário.
+</code>
+</pre>
+</body>
+</html>

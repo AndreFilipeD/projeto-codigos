@@ -8,11 +8,29 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;JS : VARIAVEIS&gt; </strong><hr><strong>&lt;DECLARAÇÃO&gt;</strong>
+<strong>&lt;JS : VARIAVEIS&gt; </strong><hr><strong>&lt;TIPOS&gt;</strong>
+
+<strong>var</strong> :: pode ser declarada em qualquer situação e ser utilizada
+antes mesmo de ser declarada, e funciona dentro e fora de seu escopo
+sem quaisquer problemas.
+
+<strong>let</strong> :: é baseada em escopo de blocos, fazendo com que funcione
+apenas dentro de seu escopo declarado.
+
+<strong>const</strong> :: deve ser inicializada imediatamente após sua declaração, pois
+é uma variavel constante, e não poderá ser alterada, também tem escopo
+de bloco igualmente a variavel let.
+
+<hr><strong>&lt;DECLARAÇÃO&gt;</strong>
 
 <strong>var nome = "andre"</strong> :: typeof nome :: string
 <strong>var salario = 0</strong> :: typeof salario :: number
-<strong>var sorte = false ou f</strong> :: typeof sorte :: boolean<hr><strong>&lt;CONVERSÃO&gt;</strong>
+<strong>var sorte = false ou f</strong> :: typeof sorte :: boolean
+
+<strong>let idade = 25</strong> :: escopo de bloco
+
+<strong>const gravidade = 9.807</strong> :: constante, escopo de bloco
+<hr><strong>&lt;CONVERSÃO&gt;</strong>
 
 <strong>Number.parseInt(variavel)</strong> :: converte a variavel para inteiro.
 <strong>Number.parseFloat(variavel)</strong> :: converte a variavel para float.
