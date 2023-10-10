@@ -138,4 +138,9 @@ footer > h1{
     width: 50px;
     padding: 10px;
     filter: invert();
+    transition: 0.3s;
+}
+.image:hover{
+    padding: 6px;
+    transition: 0.7s;
 }
