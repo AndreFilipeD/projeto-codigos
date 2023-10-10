@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        td{
+            border: 1px solid black;
+            width: 100px;
+            height: 25px;
+        }
+        tbody tr:nth-child(2n){
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML + CSS : EMBEDAR RESPONSIVO&gt;</strong><hr><strong>&lt;CONTEUDO EMBEDADO&gt;</strong>
+
+Consiga em alguma opção de compartilhar o conteúdo que
+deseja embedar em seu site, como no exemplo abaixo um
+video embedado do firefox pelo youtube ::
+
+<strong>    &lt;iframe width="560" height="315" src="https://www.youtube.com/
+    embed/czEGwcZSYyo?si=-TQnCAFrWDExLlu8" title="YouTube video
+    player" frameborder="0" allow="accelerometer; autoplay;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+     web-share" allowfullscreen&gt;&lt;/iframe&gt;
+</strong><hr><strong>&lt;ENVELOPADOR DE VIDEOS&gt;</strong>
+
+Agora vamos criar uma <strong>&lt;div&gt;</strong> de classe do conteudo que está 
+utilizando, no exemplo é um video, que estará envelopando
+nosso <strong>&lt;iframe&gt;</strong> embedado e terá o parâmetro <strong>position: relative;</strong>
+<strong>
+    div.video{
+        padding: 20px;
+        position: relative;
+    }</strong><hr><strong>&lt;ADEQUANDO IFRAME&gt;</strong>
+
+O <strong>&lt;iframe&gt;</strong> vai receber <strong>position: absolute;</strong> e as seguintes
+configurações de transformação em sua posição ::    <strong>
+
+    div.video > iframe{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }</strong>
+
+
+        </code>
+    </pre>
+</body>
+</html>
