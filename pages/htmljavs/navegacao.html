@@ -8,24 +8,42 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;HTML + JAVASCRIPT : CRIAÇÃO&gt; </strong><hr><strong>&lt;SELECIONANDO OBJETO PARA CRIAÇÃO&gt;</strong>
+<strong>&lt;HTML + JAVASCRIPT : NAVEGAÇÃO&gt; </strong><hr><strong>&lt;ESCONDENDO UMA CATEGORIA INTEIRA&gt;</strong>
 
-<strong>var space = document.querySelector('div#space')</strong> ::
-coloca a <strong>div#space</strong> já criada no HTML dentro da variavel
-<strong>space</strong>, para que possamos utiliza-la em outra parte do projeto.<hr><strong>&lt;CRIANDO ELEMENTO HTML&gt;</strong>
+Esconda toda a classe que contem o conteudo para transitar
+na mesma página, é o que acontece nesse repositório ao mudar
+as categorias coloridas acima ::
+<strong>
+    cleaner = window.document.querySelector('.a')
+    cleaner.style='display: none'
+</strong><hr><strong>&lt;SELETOR COM RETORNO&gt;</strong>
 
-<strong>var img = document.createElement('img')</strong> :: Equivalente 
-a criar tag img no documento HTML<hr><strong>&lt;ADICIONANDO ATRIBUTOS AO ELEMENTO JÁ CRIADO&gt;</strong>
+Ao clicar na nova "aba", atribua a função <strong>transitar(2)</strong> com o
+numero respectivo da barra de navegação, fazendo com que ele
+abra apenas a que o usuario desejar, sempre escondendo todas 
+as outras abas antes com uma função <strong>clear()</strong>
 
-<strong>img.setAttribute('id','foto')</strong> :: Atribui <strong>id="foto"</strong> no elemento <strong>img</strong>.
+<strong>function transitar(c){</strong>
 
-<strong>img.setAttribute('src','imagens/jovem-h.png')</strong> :: Atribui
-endereço da imagem <strong>src="imagens/jovem-h.png"</strong> no elemento <strong>img</strong>.<hr><strong>&lt;INSERINDO ELEMENTO EM OBJETO JÁ EXISTENTE&gt;</strong>
+    <strong>clean()</strong>
 
-<strong>space.appendChild(img)</strong> :: pegamos a variavel space que agora é
-nossa div#space, e atribuimos a ela o filho(img) para que apareça
-em tela.
+    <strong>if(c==1){</strong> // MOSTRAR HTML5
 
+        cleaner = window.document.querySelector('.html')//1
+        cleaner.style='display: flex'
+
+    <strong>}else if(c==2){</strong> // MOSTRAR CSS3
+
+        cleaner = window.document.querySelector('.css')//2
+        cleaner.style='display: flex'
+
+    <strong>}else{</strong> // MOSTRAR JAVASCRIPT
+
+        cleaner = window.document.querySelector('.javascript')//3
+        cleaner.style='display: flex'
+
+    <strong>}</strong>
+<strong>}</strong>
 </code>
 </pre>
 </body>
