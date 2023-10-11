@@ -21,15 +21,38 @@
 <body>
 <pre>
 <code id="data"><!--&lt;&gt;-->
-<strong>&lt;HTML5 : FORMULÁRIOS&gt; </strong><hr><strong><strong>&lt;form autocomplete="on"&gt;
+<strong>&lt;HTML5 : FORMULÁRIOS&gt;</strong><hr><strong>&lt;ENTRADA COMUM&gt;</strong>
+
+<strong>&lt;form autocomplete="on"&gt;</strong>
     &lt;label for="idnome"&gt;Nome:&lt;/label&gt;
     &lt;input type="text" name="nome" id="idnome" placeholder="Clique Aqui"&gt;
-&lt;/form&gt;<form autocomplete="off">
+<strong>&lt;/form&gt;</strong><form autocomplete="off">
 <label for="idnome">Nome:</label>
-<input type="text" name="nome" id="idnome" placeholder="Clique Aqui">
-</form>
+<input type="text" name="nome" id="idnome" placeholder="Clique Aqui"></strong>
+</form><hr><strong>&lt;RADIO&gt;</strong>
 
-</strong>
+Para que todos os radios estejam conectados, utilize
+em todos eles o name="igual", pois se for "diferente"
+seria como se fosse outro formulário separado;
+
+Caso queira um titulo clicavel, adicione uma id no radio
+e depois crie um label com o for apontado pra esse id criado;
+
+Confira o exemplo abaixo ::
+
+<strong>&lt;form autocomplete="on"&gt;</strong>
+&lt;input type="radio" name="web" value="sim" id="idsim"&gt;&lt;label for="idsim"&gt;Sim&lt;/label&gt;
+&lt;input type="radio" name="web" value="nao" id="idnao"&gt;&lt;label for="idnao"&gt;Não&lt;/label&gt;
+&lt;input type="radio" name="web" value="talvez" id="idtalv"&gt;&lt;label for="idtalv"&gt;Talvez&lt;/label&gt;
+&lt;input type="radio" name="web" value="quem_sabe" id="idqs"&gt;&lt;label for="idqs"&gt;Quem Sabe&lt;/label&gt;
+<strong>&lt;/form&gt;</strong>
+<form autocomplete="on">
+<input type="radio" name="web" value="sim" id="idsim"><label for="idsim">Sim</label>
+<input type="radio" name="web" value="nao" id="idnao"><label for="idnao">Não</label>
+<input type="radio" name="web" value="talvez" id="idtalv"><label for="idtalv">Talvez</label>
+<input type="radio" name="web" value="quem_sabe" id="idqs"><label for="idqs">Quem Sabe</label>
+</form><hr>
+
 </code>
 </pre>
 </body>
