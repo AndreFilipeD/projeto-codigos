@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+<pre>
+<code id="data"><!--&lt;&gt;-->
+<strong>&lt;HTML5 : SELECT&gt;</strong><hr><strong>&lt;INICIALIZAÇÃO&gt;</strong>
+
+A tag <strong>&lt;select&gt;</strong> também é uma entrada de formulario, então
+deve ser envelopada por um <strong>&lt;form&gt;...&lt;/form&gt;</strong>.
+
+<strong>&lt;select name="jogos"&gt;</strong>
+    &lt;option value=""&gt;Escolha uma plataforma de jogos&lt;/option&gt;
+    &lt;option value="xbox"&gt;Xbox Series&lt;/option&gt;
+    &lt;option value="ps5"&gt;PS5&lt;/option&gt;
+    &lt;option value="pc"&gt;PC Gaming&lt;/option&gt;
+<strong>&lt;/select&gt;</strong>
+
+<select name="jogos">
+    <option value="">Escolha uma plataforma de jogos</option>
+    <option value="xbox">Xbox Series</option>
+    <option value="ps5">PS5</option>
+    <option value="pc">PC Gaming</option>
+</select>
+
+<strong>&lt;select name="plataforma" required="required"&gt;...&lt;/select&gt;</strong> :: acrescente
+required para garantir que alguma opção foi selecionada antes do envio.
+<hr><strong>&lt;OUTRAS CONFIGURAÇÕES&gt;
+
+&lt;select name="plataforma" multiple&gt;...&lt;/select&gt;</strong> ::
+Ao segurar <strong>"ctrl"</strong>, pode selecionar mais de uma opção, ex ::
+
+<select name="jogos" multiple>
+    <option value="">Escolha uma plataforma de jogos</option>
+    <option value="xbox">Xbox Series</option>
+    <option value="ps5">PS5</option>
+    <option value="pc">PC Gaming</option>
+</select>
+
+<strong>&lt;select name="plataforma" size="5"&gt;...&lt;/select&gt;</strong> ::
+Utilize size para definir o tamanho da lista, assim evitando ter que scrollar.
+
+<select name="plataforma" required="required" multiple size="5">
+    <option value="">Escolha uma plataforma de jogos</option>
+    <option value="xbox">Xbox Series</option>
+    <option value="ps5">PS5</option>
+    <option value="pc">PC Gaming</option>
+    <option value="pc">Nintendo Switch</option>
+</select>
+
+Seletor de sim ou não simples ::<strong>
+&lt;label&gt;Você tem mais de 18 anos?&lt;/label&gt;
+&lt;select name="maioridade"&gt;
+</strong>    &lt;option value="sim"&gt;Sim&lt;/option&gt;
+    &lt;option value="nao"&gt;Não&lt;/option&gt;
+<strong>&lt;/select&gt;</strong>
+
+<label>Você tem mais de 18 anos?</label>
+<select name="maioridade">
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+</select>
+
+
+
+</code>
+</pre>
+</body>
+</html>
