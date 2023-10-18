@@ -41,7 +41,23 @@ const loop = setInterval((event) => {
     process()
 })</strong>
 
-<strong>clearInterval(loop)</strong> :: irá interromper o loop quando necessário.
+<strong>clearInterval(loop)</strong> :: irá interromper o loop quando necessário.<hr><strong>&lt;CRONÔMETRO&gt;</strong>
+
+Criamos uma função para desenhar o cronômetro e
+atualizamos uma variavel com um <strong>new Date()</strong> ::
+
+<strong>function clock(){</strong>
+    var d = new Date()
+    hora.innerHTML = d.getHours()+':'+d.getMinutes()
+<strong>}</strong>
+
+Vamos criar uma variavel para receber o <strong>seInterval()</strong> com a função
+clock que criamos, assim poderemos pausar a variavel quando quisermos ::
+<strong>clockloop = setInterval(clock, 500);</strong>
+
+Pausando a variavel que contem o <strong>setInterval()</strong> ::
+<strong>clearInterval(clockloop)</strong>
+
 </code>
 </pre>
 </body>
