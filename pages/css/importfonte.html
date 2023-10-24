@@ -17,23 +17,27 @@ Importa do google fonts.
 <strong>font-family: 'Dancing Script','cursive';</strong> ::
 adicione a familia á cascata que deseja usar a fonte importada
 <hr><strong>
-    @font-face {
-        font-family: [none];
-        src: url('fontes/lovelarry.otf');
+    @font-face { /* Fonte TrueType */
+        font-family: 'NomeFonte';
+        src: url('fontes/lovelarry.otf')
         format('opentype');
     }
     
-    @font-face {
-        font-family: [none];
-        src: url('fontes/lovelarry.ttf');
+    @font-face { /* Fonte TrueType */
+        font-family: 'NomeFonte';
+        src: url('fontes/lovelarry.ttf')
         format('truetype');
     }
 
-    talvez seja necessário colocar o font-weight e
+    h1{
+        font-family: 'NomeFonte', sans-serif;
+    }
+
+    Talvez seja necessário colocar o font-weight e
     font-style como normal para padroniza-las.<hr>&lt;TIPOS DE FORMATO&gt;</strong> ::
 
-opentype (otf) - truetype (ttf) - embedded-opentype 
-truetype-aat (Apple Advanced Typ) - (svg)
+<strong>opentype (otf)</strong> - <strong>truetype (ttf)</strong> - <strong>embedded-opentype</strong> 
+<strong>truetype-aat (Apple Advanced Typ)</strong> - <strong>(svg)</strong>
 
 <hr>
 </code>

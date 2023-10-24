@@ -107,7 +107,8 @@ main{
 }
 #menu > a:hover{
     text-decoration: underline;
-    background-color: rgb(153, 139, 126);
+    background-color: rgb(177, 143, 112);
+    /*background-color: rgb(73, 94, 73);*/
     cursor: pointer;
     transition: 0.2s;
 }
