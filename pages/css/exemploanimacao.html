@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        /*
+        @keyframes nomeanima{
+            0% {top: 0px; left: 0px;}
+            25% {top: 0px; left: 30px;}
+            50% {top: 30px; left:30px;}
+            75% {top: 30px; left: 0px;}
+            100% {top: 0px; left: 0px;}
+        }
+        #animador{animation-name: nomeanima;}
+        .block{
+            height: 30px;width: 30px;
+            background-color: red;border-radius: 5px;
+            border: 2px solid black;
+
+            position: relative;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }*/
+        @keyframes nomeanima{
+            0% {top: 0px; left: 0px;}
+            25% {top: 0px; left: 30px;}
+            50% {top: 30px; left:30px;}
+            75% {top: 30px; left: 0px;}
+            100% {top: 0px; left: 0px;}
+        }
+        @keyframes run{
+            from{left:0px;}
+            to{left:300px;}
+        }
+        #bloco{
+            position: relative;
+            animation-name: nomeanima;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            
+            height: 30px;width: 30px;
+            background-color: red;border-radius: 5px;
+            border: 2px solid black;
+        }
+        .cube{
+            position: relative;
+            height: 30px;width: 30px;
+            background-color: red;border-radius: 5px;
+            border: 2px solid black;
+        }
+        .runcube{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: 900;
+            color: white;
+            position: relative;
+            height: 30px;width: 75px;
+            background-color: red;border-radius: 5px;
+            border: 2px solid black;
+        }
+        #ana{
+            animation-name: nomeanima;
+            animation-duration: 4s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+        }
+        #anb{
+            animation-name: nomeanima;
+            animation-duration: 4s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+        #anc{
+            animation-name: run;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #and{
+            animation-name: run;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        #ane{
+            animation-name: run;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+        }
+        #anf{
+            animation-name: run;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+        #ang{
+            animation-name: run;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;CSS3 : EXEMPLOS ANIMAÇÃO&gt;</strong><hr><strong>&lt;ESTRUTURA BASICA&gt;</strong>
+<div id="bloco"></div>
+
+<strong>@keyframes nomeanima{</strong>
+    0% {top: 0px; left: 0px;}
+    25% {top: 0px; left: 30px;}
+    50% {top: 30px; left:30px;}
+    75% {top: 30px; left: 0px;}
+    100% {top: 0px; left: 0px;}
+<strong>}
+#bloco{</strong>
+    position: relative;
+    animation-name: nomeanima;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /*estilo visual aqui ocultado p/economizar espaço*/
+<strong>}</strong><hr><strong>&lt;OUTROS EXEMPLOS&gt;</strong>
+<div id="ana" class="cube"></div>
+
+<strong>animation-direction: reverse;</strong>
+<div id="anb" class="cube"></div>
+
+<strong>animation-direction: alternate-reverse;</strong><hr><strong>&lt;animation-timing-function:&gt;</strong>
+<div id="anc" class="runcube">linear;</div>Velocidade fixa do inicio ao fim
+<div id="and" class="runcube">ease;</div>Velocidade fixa do inicio ao fim
+<div id="ane" class="runcube">ease-in;</div>Velocidade fixa do inicio ao fim
+<div id="anf" class="runcube">ease-out;</div>Velocidade fixa do inicio ao fim
+<div id="ang" class="runcube">ease-in-out;</div>Velocidade fixa do inicio ao fim
+        </code>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;CSS3 : FUNÇÕES DE ANIMAÇÃO&gt;</strong><hr><strong>&lt;KEYFRAMES&gt;</strong>
+
+<strong>@keyframes nomeanimacao{}</strong> :: Criamos um animation name para ser
+importado em alguma caixa.
+
+<strong>@keyframes example{
+    from {background-color: red;}
+    to {background-color: yellow;}
+}</strong> :: definimos como começa e termina a animação.
+
+<strong>@keyframes example{</strong>
+    0% {background-color: red;}
+    50% {background-color: green;}
+    100% {background-color: blue;}
+<strong>}</strong> :: podemos selecionar por % da animação.<hr><strong>&lt;FUNÇÕES&gt;</strong>
+
+<strong>animation-name: example;</strong> :: Importa a animação
+pelo nome definido no keyframe da mesma.
+
+<strong>animation-duration: 4s;</strong> :: Define a duração da
+animação.
+
+<strong>animation-delay: 1s; ou -2s;</strong> :: Define um atraso
+ou se negativo um adiantamento na inicialização da animação.
+
+<strong>animation-iteration-count: 3; ou infinite;</strong> :: Define quantas
+vezes a animação será repetida.
+
+<strong>animation-direction: normal; ou reverse; ou alternate; ou
+alternate-reverse;</strong> :: Modifica a direção de inicio da animação,
+e pode ser configurado alternar, ou alternar do final.
+
+<strong>animation-timing-function: ease; ou linear; ou ease-in;
+ou ease-out; ou ease-in-out; ou cubic-bezier(n,n,n,n);</strong> ::
+Ajusta a velocidade de como a animação vai correr em cada etapa.
+
+<strong>animation-fill-mode: none; ou forwards; ou backwards; ou both;</strong> :: 
+Define se a animação vai inicializar ou finalizar
+"vestindo" o estilo aplicado no keyframe.
+        </code>
+    </pre>
+</body>
+</html>
