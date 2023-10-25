@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : ARRAY&gt; </strong><hr><strong>&lt;DECLARAÇÃO&gt;</strong>
+<strong>
+let listaVazia = [];
+let listaNumero = [1,2,3,4,55,66,777];</strong> ::
+Posição na lista :|0|1|2|3|4 |5 | 6 |
+
+<strong>window.alert(listaNumero);</strong> :: [1,2,3,4,55,66,777]
+
+<strong>window.alert(listaNumero[0])</strong> :: Mostrará: 1
+<strong>window.alert(listaNumero[5])</strong> :: Mostrará: 66
+
+<strong>let numero = listaNumero[2];</strong> :: Variavel numero = 3
+
+<strong>window.alert(numero+listaNumero[3]);</strong> :: Resultado: 7
+
+<strong>listaNumero = 4; window.alert(listaNumero);</strong> ::
+Resultado 4, porque ao fazer isso substitui a lista por 4
+<hr><strong>&lt;SUBSTITUIÇÃO&gt;</strong>
+
+Considerando :: <strong>let listaNumero = [1,2,3,4,55,66,777];</strong>
+
+<strong>listaNumero[0] = 88; listaNumero[1] = 99;</strong>
+
+<strong>window.alert(listaNumero);</strong> :: Resultado: [88,99,3,4,55,66,777]<hr><strong>&lt;COMANDOS&gt;</strong>
+
+<strong>listaNumero.push(2);
+listaNumero.push(22);
+listaNumero.push(222);
+</strong>
+<strong>window.alert(listaNumero);</strong> :: Resultado: [88,99,3,4,55,66,777,2,22,222]
+Push acrescenta sempre no final do Array
+
+<strong>window.alert(listaNumero.length);</strong> :: Resultado: 10
+
+<strong>window.alert(listaNumero[listaNumero.length - 1]);</strong> ::
+Resultado: 222 :: mostra o ultimo valor da lista
+
+<strong>listaNumero.pop();</strong> :: remove ultimo item da lista :: 222
+
+<strong>listaNumero.shift();</strong> :: remove primeiro item da lista :: 88
+
+<strong>listaNumero.unshift(345);</strong> :: adiciona 345 ao início da lista.
+
+<strong>listaNumero.indexOf(66);</strong> :: retorna o numero 5, posição na lista
+
+<strong>listaNumero.splice(2, 3);</strong> :: o primeiro valor é a posição inicial,
+e removerá os 3 conteudos em direção ao fim :: <strong>removerá :: 3, 4, 55</strong>
+
+<strong>var copiar = listaNumero.slice();</strong> :: copia conteudo para outra lista
+</code>
+</pre>
+</body>
+</html>
