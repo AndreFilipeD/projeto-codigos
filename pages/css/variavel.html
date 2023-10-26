@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;CSS3 : VARIAVEL&gt;</strong><hr><strong>&lt;DECLARAÇÃO&gt;</strong>
+
+Podemos armazenar praticamente qualquer propriedade
+dentro de uma variavel;
+
+Defina as variaveis em CSS dentro de :root ::
+
+<strong>:root{</strong>
+    <strong>--fonte1:</strong> Verdana, Geneva, Tahoma, sans-serif;
+    <strong>--cor1:</strong> #121314;
+    <strong>--main-border-radius:</strong> 20px
+    <strong>--fontsize:</strong> 2.34em;
+    <strong>--image-width:</strong> 800px;
+    <strong>--image-height:</strong> calc(var(--image-width) / (4/3));
+    <strong>--numerocalc:</strong> 10;
+    <strong>--all-padding:</strong> 60px 20px 40px 10px;
+    <strong>--margin:</strong> auto;
+    <strong>--main-image:</strong> url(local/file.png);
+<strong>}</strong><hr><strong>&lt;APLICAÇÃO&gt;</strong>
+
+<strong>#blockexample{</strong>
+    font-family: <strong>var(--fonte1);</strong>
+    color: <strong>var(--fonte1);</strong>
+    border-radius: <strong>var(--fonte1);</strong>
+    font-size: <strong>var(--fontsize);</strong>
+    width: <strong>var(--image-width);</strong>
+    height: <strong>var(--image-height);</strong>
+    padding: <strong>var(--all-padding);</strong>
+    margin: <strong>var(--margin);</strong>
+    background-image: <strong>var(--main-image);</strong>
+<strong>}</strong>
+        </code>
+    </pre>
+</body>
+</html>
