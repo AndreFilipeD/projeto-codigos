@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : EVENT LISTENER&gt; </strong><hr><strong>&lt;ESTRUTURA&gt;</strong>
+
+<strong>target.addEventListener("event", function, useCapture)</strong>
+
+<strong>target</strong> :: é o elemento HTML a ser manipulado.
+
+<strong>.addEventListener(...)</strong> :: Elemento que faz parte do DOM
+que serve como manipulador de eventos.
+
+<strong>event</strong> :: string que especifica qual evento deseja ouvir
+Caso queira ver quais são os eventos, <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">clique aqui</a>
+
+<strong>function</strong> :: função sem parenteses a ser executada
+
+<strong>useCapture</strong> :: um valor booleano opcional por padrão false
+que especifica se o evento deve ser executado na fase de 
+captura ou de envio aos eventos pais<hr><strong>&lt;EXEMPLO&gt;</strong>
+
+<strong>var botao =</strong> window.document.getElementById('botao');
+<strong>var size =</strong> 75;
+
+<strong>botao.addEventListener("click", crescer);</strong>
+
+<strong>function crescer(){</strong>
+    <strong>size+=</strong>10;
+    <strong>botao.style=</strong>'width:'+(size/1.5)+'px;
+    height:'+size+'px;
+    border-radius:'+(size*2)+'px;'
+<strong>}</strong>
+</code>
+</pre>
+</body>
+</html>
