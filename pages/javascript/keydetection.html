@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : KEY DETECTION&gt; </strong><hr><strong>&lt;EVENTLISTENER&gt;</strong>
+
+<strong>var text = window.document.querySelector("#text")</strong>
+Coletando elemento para escrever exemplo;
+
+<strong>document.addEventListener("keypress", function onPress(event) {</strong>
+    if (event.key === "z") { <strong>/*condição e resultado especifico*/</strong>
+        text.innerHTML += "CLICOU"
+    }
+<strong>});</strong>
+
+<strong>document.addEventListener("keypress", function onPress(event) {</strong>
+    if (event.key) { <strong>/*escrever digito pressionado*/</strong>
+        text.innerHTML += event.key
+    }
+<strong>});</strong>
+
+</code>
+</pre>
+</body>
+</html>
