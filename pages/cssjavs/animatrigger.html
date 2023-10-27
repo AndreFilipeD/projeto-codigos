@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+@keyframes turna{
+    0%{transform: rotate(0deg);}
+    33%{transform: rotate(40deg);}
+    66%{transform: rotate(-20deg);}
+    0%{transform: rotate(0deg);}
+}
+@keyframes turnb{
+    0%{transform: rotate(0deg);}
+    33%{transform: rotate(40deg);}
+    66%{transform: rotate(-20deg);}
+    0%{transform: rotate(0deg);}
+}
+#block{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation-duration: 0.4s;
+}
+    </style>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;ANIMATION TRIGGER&gt; </strong><hr><strong>&lt;CSS&gt;</strong>
+
+<strong>@keyframes turna{</strong>
+    0%{transform: rotate(0deg);}
+    33%{transform: rotate(40deg);}
+    66%{transform: rotate(-20deg);}
+    0%{transform: rotate(0deg);}
+<strong>}</strong>
+<strong>@keyframes turnb{</strong>
+    0%{transform: rotate(0deg);}
+    33%{transform: rotate(40deg);}
+    66%{transform: rotate(-20deg);}
+    0%{transform: rotate(0deg);}
+<strong>}</strong>
+<strong>#block{</strong>
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation-duration: 0.4s;
+<strong>}</strong><hr><strong>&lt;JAVASCRIPT&gt;</strong>
+
+<strong>var obj =</strong> window.document.querySelector("#block")
+<strong>var turnmode =</strong> true
+
+<strong>function anim(){</strong>
+    <strong>turnmode =</strong> !turnmode /*alterna entre true e false*/
+    <strong>if(turnmode){</strong>
+        obj.style="animation-name: turna;"
+    <strong>}else{</strong>
+        obj.style="animation-name: turnb;"
+    <strong>}</strong>
+<strong>}</strong><hr><strong>&lt;HTML&gt;</strong>
+
+<strong>&lt;div id="block" onclick="anim()"&gt;</strong>clique aqui para iniciar a animação<strong>&lt;/div&gt;</strong>
+<hr><strong>&lt;EXEMPLO&gt;</strong></code></pre>
+<div id="block" onclick="anim()">clique aqui para iniciar a animação</div>
+    <script>
+var obj = window.document.querySelector("#block")
+var turnmode = true
+
+function anim(){
+    turnmode = !turnmode
+    if(turnmode){
+        obj.style="animation-name: turna;"
+    }else{
+        obj.style="animation-name: turnb;"
+    }
+}
+    </script>
+</body>
+</html>
