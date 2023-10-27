@@ -29,7 +29,21 @@ Exemplos de inicialização inline ::
 
 E ::
 
-<strong>&lt;p style="color:purple;font-weight: 600;"&gt; Parágrafo &lt;/p&gt;</strong>
+<strong>&lt;p style="color:purple;font-weight: 600;"&gt; Parágrafo &lt;/p&gt;</strong><hr><strong>&lt;DICA&gt;</strong>
+<strong>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }</strong>
+    
+Utilize esse comando dentro de *, que acessará todas as caixas e
+definirá inicialmente todas elas sem espaçamentos para que você
+possa customizar de maneira mais precisa;
+
+box-sizing: border-box; :: tudo que for aplicado no objeto filho
+não irá transpassar o objeto pai. É bom inicializar como padrão.
+
 
         </code>
     </pre>
