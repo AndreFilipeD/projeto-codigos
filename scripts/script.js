@@ -16,8 +16,11 @@ function menu(c){
     }else if(c==5){// MOSTRAR HTML5 + JAVASCRIPT
         cleaner = window.document.querySelector('.e')//5
         cleaner.style='display: flex'
-    }else{// MOSTRAR CSS + JAVASCRIPT
+    }else if(c==6){// MOSTRAR CSS + JAVASCRIPT
         cleaner = window.document.querySelector('.f')//6
+        cleaner.style='display: flex'
+    }else{// MOSTRAR NOTAS
+        cleaner = window.document.querySelector('.g')//6
         cleaner.style='display: flex'
     }
 }
@@ -34,5 +37,7 @@ function clean(){
     cleaner = window.document.querySelector('.e')
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.f')
+    cleaner.style='display: none'
+    cleaner = window.document.querySelector('.g')
     cleaner.style='display: none'
 }
