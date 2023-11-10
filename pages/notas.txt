@@ -1,3 +1,6 @@
 <HTML + CSS : MEDIA-QUERIES>
 Atualizar informação sobre tipos de
 dispositivos, falta explicar sua estrutura.
+
+<CSS + JAVASCRIPT : ALTERAÇÃO>
+Organizar e renomear categorias.
