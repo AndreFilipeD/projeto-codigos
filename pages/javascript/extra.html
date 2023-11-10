@@ -10,16 +10,28 @@
         <code id="data">
 <strong>&lt;JS : EXTRA&gt; </strong><hr><strong>&lt;WHATSAPP&gt;</strong>
 
-var info = window.document.querySelector('#zap')
-info.setAttribute("href","https://wa.me/19997597681?text=<strong>
-    '
-    Olá,
-    Montei meu carrinho
-    • Camisa listrada social - 1 un [R$60,00]
-    • Vestido cigana pink - 1 un [R$120,00]
-    • Calça Jeans - 1 un [R$80,00]
-    '</strong>
-")
+tornando um &lt;a&gt; um link referencia para whatsapp de alguem
+::
+var number = 19997597681 //imperio
+var texto = encodeURIComponent(`🦒Olá, Império!
+Acabei de montar meu carrinho! 💖
+
+  • *Camisa listrada social* - 1 un [R$ ${60}]
+  • *Vestido cigana pink* - 1 un [R$ ${120}]
+  • *Calça Jeans* - 1 un [R$ ${80}]
+  
+Fico no aguardo de seu atendimento.`
+)
+<strong>
+window.document.querySelector('#zap').setAttribute(
+"href","https://api.whatsapp.com/send/?phone="+number+"&text="+texto)
+</strong>
+:: codigo alternativo ::
+<strong>
+window.document.querySelector('#zap').setAttribute(
+"href","https://wa.me/?"+number+"text="+texto)
+</strong>
+
 
 </code>
 </pre>

@@ -17,13 +17,13 @@ pre > code{
     padding: -20px;
 }
 
-#html5{background-color: rgb(255, 68, 0);transition:.2s}
-#css3{background-color: rgb(0, 135, 224); transition:.2s}
-#javas{background-color: rgb(240, 188, 17); transition:.2s}
-#htcs{background-color: rgb(25, 201, 148); transition:.2s}
-#htjs{background-color: rgb(255, 145, 0); transition:.2s}
-#csjs{background-color: rgb(204, 0, 255); transition:.2s}
-#notas{background-color: rgb(70, 70, 70); transition:.2s}
+#html5{background-color: rgb(255, 68, 0); transition:.2s;}
+#css3{background-color: rgb(0, 135, 224); transition:.2s;}
+#javas{background-color: rgb(240, 188, 17); transition:.2s;}
+#htcs{background-color: rgb(25, 201, 148); transition:.2s;}
+#htjs{background-color: rgb(255, 145, 0); transition:.2s;}
+#csjs{background-color: rgb(204, 0, 255); transition:.2s;}
+#notas{background-color: rgb(70, 70, 70); transition:.2s;}
 
 header{
     width: 100vw;
