@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : CLONAGEM&gt; </strong><hr><strong>&lt;CRIAÇÃO&gt;</strong>
+<strong>
+clone = window.document.querySelector('.applet').cloneNode(true)
+shopList.appendChild(clone)
+</strong>
+Coletamos o objeto, e utilizamos .cloneNode(true) para clonar
+também os elementos internos do objeto selecionado.
+
+<strong>.cloneNode(false)</strong> não coleta os filhos do objeto.<hr><strong>&lt;DESTRUIÇÃO&gt;</strong>
+<strong>
+erase = window.document..querySelector('.applet')
+erase.parentNode.removeChild(erase);
+</strong>
+em alguns navegadores esse metodo funciona ::
+<strong>document.getElementById('conteudo').remove()</strong><hr><strong>&lt;CLONAGEM EM MASSA&gt;</strong>
+<strong>
+var shopCont = 0 
+var shopItem=[]
+var shopList = window.document.querySelector('#right')
+
+function create(item){
+    switch(item){
+        case 0:
+    </strong>       shopCont++
+           shopItem[shopCont] = window.document.createElement('div')
+           shopItem[shopCont].setAttribute('class','shopj')
+           shopItem[shopCont].innerHTML="item "+shopCont+" criado!!"
+           shopList.appendChild(shopItem[shopCont])
+           break;
+       <strong>case 1:</strong>
+           shopItem[shopCont].parentNode.removeChild(shopItem[shopCont])
+           shopCont--
+           break;<strong>
+    }
+}
+       </strong>
+</code>
+</pre>
+</body>
+</html>
