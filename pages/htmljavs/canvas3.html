@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;HTML + JAVASCRIPT : CANVAS 3&gt; </strong><hr><strong>&lt;CIRCULO&gt;</strong>
+:: Exemplo em um canvas 100x100
+
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.stroke();
+
+Os argumentos são:
+<strong>(x inicial, y inicial, raio, angulo inicial, angulo final)</strong>
+
+angulo inicial é definido em radianos,
+medido a partir do eixo x positivo.
+
+angulo final é definido em radianos,
+medido a partir do eixo x positivo.
+
+existe um <strong>true false</strong> final opcional
+Desenha o arco sentido horario ou anti-horário
+entre os ângulos de início e fim.
+
+<canvas id="canv1" width="100" height="100">
+Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas><hr><strong>&lt;OUTRAS POSSIBILIDADES&gt;</strong>
+
+<strong>[CIRCULO PREENCHIDO]</strong>
+
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.fill();
+:: <strong>fill() preenche o circulo e serve como stroke</strong>
+
+<strong>[MEIO CIRCULO ANGULADO]</strong>
+
+ctx.beginPath();
+ctx.arc(170, 50, 50, 6, Math.PI);
+ctx.fill();
+
+<canvas id="canv2" width="250" height="150">
+    Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas>
+
+</code>
+</pre>
+<script>
+var canvas = window.document.getElementById("canv1")
+var ctx = canvas.getContext("2d")
+var canvasb = window.document.getElementById("canv2")
+var ctxb = canvasb.getContext("2d")
+//CANVAS A
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.stroke();
+//CANVAS B
+ctxb.beginPath();
+ctxb.arc(50, 50, 50, 0, 2 * Math.PI);
+ctxb.fill();
+
+ctxb.beginPath();
+ctxb.arc(170, 50, 50, 6, Math.PI);
+ctxb.fill();
+
+</script>
+</body>
+</html>

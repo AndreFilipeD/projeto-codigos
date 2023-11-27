@@ -8,15 +8,50 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;HTML + JAVASCRIPT : CANVAS 1&gt; </strong><hr>
-<strong>&lt;DECLARAÇÃO&gt; </strong>
+<strong>&lt;HTML + JAVASCRIPT : CANVAS 1&gt; </strong><hr><strong>&lt;INICIALIZAÇÃO HTML&gt;</strong>
 
 <strong>&lt;canvas id="areaCanvas" width="600" height="1000"&gt;</strong><br>Seu navegador não<strong>&lt;br&gt;</strong>suportou o elemento canvas<strong>&lt;/canvas&gt;</strong>
 ::
 Pode colocar uma mensagem caso não seja possivel carrega-lo
-ou inserir uma imagem ou outro conteudo equivalente dentro.<hr>
+ou inserir uma imagem ou outro conteudo equivalente dentro.<hr><strong>&lt;INICIALIZAÇÃO JAVASCRIPT&gt;</strong>
+<strong>
+var canvas = window.document.getElementById("areaCanvas");
+var ctx = canvas.getContext("2d");
+</strong>::
+Coletamos o elemento canvas pelo ID, e depois
+extraimos o contexto 2D desse mesmo canvas para uma
+variavel separada, assim atravez dessa variavel podemos
+desenhar nesse canvas utilizando o contexto 2D.<hr><strong>&lt;DESENHANDO LINHAS&gt;</strong>
+
+<strong>ctx.beginPath();</strong>
+:: Inicializamos um novo caminho
+
+<strong>ctx.moveTo(0, 0);</strong>
+:: Posicionamos o ponteiro em 0x e 0y
+
+<strong>ctx.lineTo(300, 150);</strong>
+:: Movemos o ponteiro para 300x e 150y
+
+<strong>ctx.stroke();</strong>
+:: Comando para realizar o desenho no caminho já inicializado.
+
+Exemplo da linha acima feita em um canvas ::
+
+<canvas id="canv" width="300" height="150">
+Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas>
 
 </code>
 </pre>
+<script>
+var canvas = window.document.getElementById("canv")
+var ctx = canvas.getContext("2d")
+
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(300, 150);
+ctx.stroke();
+
+</script>
 </body>
 </html>

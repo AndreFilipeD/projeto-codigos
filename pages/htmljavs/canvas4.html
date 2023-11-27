@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;HTML + JAVASCRIPT : CANVAS 4&gt; </strong><hr><strong>&lt;CURVA BEZIER&gt;</strong>
+:: Exemplo em um canvas 400x100
+
+ctx.beginPath();
+ctx.moveTo(50, 20);
+ctx.bezierCurveTo(230,30,150,80,250,100);
+ctx.stroke();
+
+Os argumentos bezierCurveTo são:
+
+1º Primeira Coordenada de controle X
+2º Primeira Coordenada de controle Y
+
+3º Segunda Coordenada de controle X
+4º Segunda Coordenada de controle Y
+
+5º A coordenada final do eixo X
+6º A coordenada final do eixo Y
+
+<canvas id="canv1" width="400" height="100">
+Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas><hr><strong>&lt;DISSECANDO CURVA BEZIER&gt;</strong>
+
+<strong>[CIRCULO PREENCHIDO]</strong>
+
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.fill();
+:: <strong>fill() preenche o circulo e serve como stroke</strong>
+
+<strong>[MEIO CIRCULO ANGULADO]</strong>
+
+ctx.beginPath();
+ctx.arc(170, 50, 50, 6, Math.PI);
+ctx.fill();
+
+<canvas id="canv2" width="400" height="200">
+    Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas>
+
+</code>
+</pre>
+<script>
+var canvas = window.document.getElementById("canv1")
+var ctx = canvas.getContext("2d")
+var canvasb = window.document.getElementById("canv2")
+var ctxb = canvasb.getContext("2d")
+//CANVAS A
+ctx.beginPath();
+ctx.moveTo(50, 20);
+ctx.bezierCurveTo(230,30,150,80,250,100);
+ctx.stroke();
+//CANVAS B
+ctxb.beginPath();
+ctxb.arc(50, 50, 50, 0, 2 * Math.PI);
+ctxb.fill();
+
+ctxb.beginPath();
+ctxb.arc(170, 50, 50, 6, Math.PI);
+ctxb.fill();
+
+</script>
+</body>
+</html>

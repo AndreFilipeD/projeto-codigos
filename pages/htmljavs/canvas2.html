@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;HTML + JAVASCRIPT : CANVAS 2&gt; </strong><hr><strong>&lt;CAMINHOS COMPLEXOS&gt;</strong>
+:: Exemplo em um canvas 200x100
+
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(7, 15);
+ctx.lineTo(15, 3);
+ctx.lineTo(78, 100);
+ctx.lineTo(37, 80);
+ctx.lineTo(117, 34);
+ctx.lineTo(90, 10);
+ctx.lineTo(200, 100);
+ctx.stroke();
+
+
+<canvas id="canv1" width="200" height="100">
+Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas><hr><strong>&lt;PREENCHER OBJETOS&gt;</strong>
+
+<strong>[CÓDIGO DO TRIANGULO]</strong>
+
+ctx.beginPath();
+ctx.moveTo(25, 25);
+ctx.lineTo(105, 25);
+ctx.lineTo(25, 105);
+ctx.fill();
+:: <strong>fill() preenche as linhas e serve como stroke</strong>
+
+<strong>[CÓDIGO DO QUADRADO]</strong>
+
+Os 4 numeros dos metodos significam ::
+<strong>(x inicial, y inicial, largura x, largura y)</strong>
+
+<strong>ctx.fillRect(125, 25, 100, 100);</strong> :: 
+cria um quadrado já preenchido - não precisa stroke
+
+<strong>ctx.clearRect(145, 45, 60, 60);</strong> ::
+Limpa um quadrado no espaço definido - não precisa stroke
+
+<strong>ctx.strokeRect(150, 50, 50, 50);</strong> ::
+cria quadrado sem preencher - não precisa stroke
+
+<canvas id="canv2" width="250" height="150">
+    Não foi possivel desenhar o canvas de exemplo... foi mal...
+</canvas>
+
+</code>
+</pre>
+<script>
+var canvas = window.document.getElementById("canv1")
+var ctx = canvas.getContext("2d")
+var canvasb = window.document.getElementById("canv2")
+var ctxb = canvasb.getContext("2d")
+//CANVAS A
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(7, 15);
+ctx.lineTo(15, 3);
+ctx.lineTo(78, 100);
+ctx.lineTo(37, 80);
+ctx.lineTo(117, 34);
+ctx.lineTo(90, 10);
+ctx.lineTo(200, 100);
+ctx.stroke();
+//CANVAS B
+ctxb.beginPath();
+ctxb.moveTo(25, 25);
+ctxb.lineTo(105, 25);
+ctxb.lineTo(25, 105);
+ctxb.fill();
+
+ctxb.fillRect(125, 25, 100, 100);
+ctxb.clearRect(145, 45, 60, 60);
+ctxb.strokeRect(150, 50, 50, 50);
+
+</script>
+</body>
+</html>
