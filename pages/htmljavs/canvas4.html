@@ -11,43 +11,46 @@
 <strong>&lt;HTML + JAVASCRIPT : CANVAS 4&gt; </strong><hr><strong>&lt;CURVA BEZIER&gt;</strong>
 :: Exemplo em um canvas 400x100
 
+<strong>let inicial = { x: 50, y: 20 };</strong> // moveTo
+<strong>let pc = { x: 230, y: 30 };</strong> // A
+<strong>let sc = { x: 150, y: 80 };</strong> // B
+<strong>let final = { x: 250, y: 100 };</strong> // final
+
 ctx.beginPath();
-ctx.moveTo(50, 20);
-ctx.bezierCurveTo(230,30,150,80,250,100);
+ctx.moveTo(inicial.x, inicial.y);
+ctx.bezierCurveTo(pc.x, pc.y, sc.x, sc.y, final.x, final.y);
 ctx.stroke();
 
-Os argumentos bezierCurveTo são:
+Os argumentos <strong>bezierCurveTo(...)</strong> são:
 
-1º Primeira Coordenada de controle X
-2º Primeira Coordenada de controle Y
+1º <strong>(A)</strong> Coordenada de controle X
+2º <strong>(A)</strong> Coordenada de controle Y
 
-3º Segunda Coordenada de controle X
-4º Segunda Coordenada de controle Y
+3º <strong>(B)</strong> Coordenada de controle X
+4º <strong>(B)</strong> Coordenada de controle Y
 
-5º A coordenada final do eixo X
-6º A coordenada final do eixo Y
+5º Coordenada final do eixo X
+6º Coordenada final do eixo Y
 
 <canvas id="canv1" width="400" height="100">
 Não foi possivel desenhar o canvas de exemplo... foi mal...
-</canvas><hr><strong>&lt;DISSECANDO CURVA BEZIER&gt;</strong>
+</canvas><hr><strong>&lt;DISSECANDO A CURVA BEZIER&gt;</strong>
 
-<strong>[CIRCULO PREENCHIDO]</strong>
+&#128308 <strong>PONTOS VERMELHOS</strong>
+<strong>(A)</strong> e <strong>(B)</strong> Coordenadas de controle  
 
-ctx.beginPath();
-ctx.arc(50, 50, 50, 0, 2 * Math.PI);
-ctx.fill();
-:: <strong>fill() preenche o circulo e serve como stroke</strong>
+&#128309 <strong>PONTOS AZUIS</strong>
+MoveTo (<strong>inicial</strong>) e Coordenadas finais (<strong>final</strong>)
 
-<strong>[MEIO CIRCULO ANGULADO]</strong>
-
-ctx.beginPath();
-ctx.arc(170, 50, 50, 6, Math.PI);
-ctx.fill();
-
-<canvas id="canv2" width="400" height="200">
+<canvas id="canv2" width="400" height="110">
     Não foi possivel desenhar o canvas de exemplo... foi mal...
 </canvas>
+<hr><strong>&lt;RESUMO&gt;</strong>
 
+• O desenho Inicia em Move To() <strong>inicial</strong>&#128309
+• A primeira parte da linha se aproxima de <strong>(A)</strong>&#128308
+• A segunda parte da linha se aproxima de <strong>(B)</strong>&#128308
+• O desenho se conclui em <strong>Final</strong>&#128309
 </code>
 </pre>
 <script>
@@ -56,18 +59,44 @@ var ctx = canvas.getContext("2d")
 var canvasb = window.document.getElementById("canv2")
 var ctxb = canvasb.getContext("2d")
 //CANVAS A
+let inicial = { x: 50, y: 20 };
+let pc = { x: 230, y: 30 };
+let sc = { x: 150, y: 80 };
+let final = { x: 250, y: 100 };
+
 ctx.beginPath();
-ctx.moveTo(50, 20);
-ctx.bezierCurveTo(230,30,150,80,250,100);
+ctx.moveTo(inicial.x, inicial.y);
+ctx.bezierCurveTo(pc.x, pc.y, sc.x, sc.y, final.x, final.y);
 ctx.stroke();
+
 //CANVAS B
 ctxb.beginPath();
-ctxb.arc(50, 50, 50, 0, 2 * Math.PI);
+ctxb.moveTo(inicial.x, inicial.y);
+ctxb.bezierCurveTo(pc.x, pc.y, sc.x, sc.y, final.x, final.y);
+ctxb.stroke();
+
+//MARCADORES VISUAIS PARA ORIENTAÇÃO
+
+ctxb.fillStyle = "#0074BA";
+ctxb.beginPath();
+ctxb.arc(inicial.x, inicial.y, 5, 0, 2 * Math.PI); // Start point
+ctxb.arc(final.x, final.y, 5, 0, 2 * Math.PI); // End point
 ctxb.fill();
 
+// Control points
+ctxb.fillStyle = "#FF0000";
 ctxb.beginPath();
-ctxb.arc(170, 50, 50, 6, Math.PI);
+ctxb.arc(pc.x, pc.y, 5, 0, 2 * Math.PI); // Control point one
+ctxb.arc(sc.x, sc.y, 5, 0, 2 * Math.PI); // Control point two
 ctxb.fill();
+
+ctxb.font = "20px Arial";
+ctxb.fillStyle = "#000000";
+ctxb.fillText("A", pc.x+10, pc.y);
+ctxb.fillText("B", sc.x+10, sc.y);
+ctxb.font = "15px Arial";
+ctxb.fillText("inicial", inicial.x+10, inicial.y);
+ctxb.fillText("final", final.x+10, final.y);
 
 </script>
 </body>
