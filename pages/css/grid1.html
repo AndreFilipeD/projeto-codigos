@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        .container{
+            width: 100px;height: 100px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .red{
+            width: 40px;height: 40px;
+            background-color: red;
+        }
+        .green{
+            width: 40px;height: 40px;
+            background-color: rgb(0, 255, 64);
+        }
+        .blue{
+            width: 40px;height: 40px;
+            background-color: rgb(17, 0, 255);
+        }
+        .yellow{
+            width: 40px;height: 40px;
+            background-color: rgb(255, 208, 0);
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;CSS3 : GRID 1&gt;</strong><hr><strong>&lt;HTML DE ESTUDO&gt;
+</strong>
+Considere para todos os exemplos Grid
+a seguinte estrututa HTML ::
+
+<strong>&lt;div class="container"&gt;
+    &lt;div class="red"&gt; &lt;/div&gt;
+    &lt;div class="green"&gt; &lt;/div&gt;
+    &lt;div class="blue"&gt; &lt;/div&gt;
+    &lt;div class="yellow"&gt; &lt;/div&gt;
+&lt;/div&gt;</strong><hr><strong>&lt;CSS DE ESTUDO&gt;</strong>
+
+<strong>.container</strong>{
+    <strong>width:</strong> 100px;<strong>height:</strong> 100px;
+    <strong>border:</strong> 1px solid black;
+    <strong>display:</strong> grid;
+    <strong>grid-template-columns:</strong> 1fr 1fr;
+    <strong>grid-template-rows:</strong> 1fr 1fr;
+}
+<strong>.red</strong>{ /* <strong>.green</strong> , <strong>.blue</strong> , <strong>.yellow</strong> */
+    <strong>width:</strong> 40px;<strong>height:</strong> 40px;
+    <strong>background-color:</strong> red;
+} /* considere o mesmo, só que com outra cor...*/
+
+<div class="container">
+    <div class="red"> </div>
+    <div class="green"> </div>
+    <div class="blue"> </div>
+    <div class="yellow"> </div>
+</div>
+<hr><strong>&lt;METODOS UTILIZADOS&gt;</strong>
+
+<strong>[Declarações]</strong>
+
+<strong>display: grid;</strong> :: Define o container como grid container.
+<strong>display: inline-grid;</strong> :: Também define grid porem inline.
+<hr><strong>[Grid templates]</strong>
+
+<strong>grid-template-columns:</strong> 1fr 1fr; ::
+Define quantidade de colunas, com suas respectivas larguras.
+
+<strong>grid-template-rows:</strong> 1fr 1fr; ::
+Define quantidade de linhas, com suas respectivas alturas.
+<hr><strong>&lt;DUVIDAS&gt;</strong>
+
+<strong>• Caso largura ou altura definida seja maior que o container</strong>::
+por padrão as <strong>"celulas"</strong> serão limitadas pelo espaço do container
+
+<strong>• 1fr </strong>:: Significa que a celula ocupará 1 fração do espaço
+disponivel no container, como temos declarado <strong>4 celulas</strong>,
+cada uma ocupará a sua fração.
+
+        </code>
+    </pre>
+</body>
+</html>
