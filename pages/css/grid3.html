@@ -58,16 +58,21 @@
         }
         /*--------------------------------------------------*/
         .container3{
-            width: 200px;height: 200px;
+            width: 100px;height: 100px;
             border: 1px solid black;
             display: grid;
-            grid-template-columns: 1fr 150px;
-            grid-template-rows: 1fr 125px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
 
         }
         .red3{
+            outline: 1px solid rgb(255, 0, 0);
             width: 100%;height: 100%;
             background-color: red;
+            grid-row: 1;
+            grid-column: 1;
+            color: white;
+            font-weight: 900;
         }
         .green3{
             width: 100%;height: 100%x;
@@ -82,10 +87,11 @@
             background-color: rgb(255, 208, 0);
         }
 
-        #align, #justify{
-            border: 1px solid black;
-            width: 200px;
+        #align, #justify, #gdOne, #gdTwo{
+            border: 2px outset rgb(150, 150, 150);
+            width: 170px;
             transition: 2s;
+            margin: 0px;
 
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -94,7 +100,7 @@
             -ms-user-select: none;
             user-select: none;
         }
-        #align:hover, #justify:hover{
+        #align:hover, #justify:hover, #gdOne:hover, #gdTwo:hover{
             background-color: lightgray;
             cursor: pointer;
             transition: .3s;
@@ -115,7 +121,7 @@
 </strong>
 <strong>grid-template-columns:</strong> 1fr 1fr;
 <strong>grid-template-rows:</strong> 1fr 1fr;
-<strong>gap:</strong> 20px; :: insere espaçamento(ou linha)<br>interno(a) aos elementos grid 
+<strong>gap:</strong> 20px; :: insere espaçamento(ou linha)<br>interno(a) aos elementos do <strong>grid</strong>. 
 
 <div class="container">
     <div class="red"> </div>
@@ -124,7 +130,11 @@
     <div class="yellow"> </div>
 </div>Elementos com height e width em 100%<hr><strong>&lt;ALIGN-ITEMS E JUSTIFY ITEMS&gt;
 
-• Elementos agora tem width: 40px;height: 40px;<br>• Container possui 120px por 120px;</strong>
+• Por default, os metodos abaixo vem com <strong>"stretch"</strong>, mas<br>vamos modifica-los para ver como se comportam.
+
+• Os elementos agora tem width: 40px; height: 40px;<br>O que impede que o "stretch" funcione.
+
+• Container possui 120px por 120px;</strong>
 
 <div class="container2">
     <div class="red2"> </div>
@@ -132,12 +142,24 @@
     <div class="blue2"> </div>
     <div class="yellow2"> </div>
 </div>
-<strong style="color: rgb(90, 90, 90);">Clique para alterar</strong><p id="align" onclick="applyChanges(1)">align-items: start;</p><p id="justify" onclick="applyChanges(2)">justify-items: start;</p><hr>
+<strong style="color: rgb(90, 90, 90);">Clique para alterar</strong><p id="align" onclick="applyChanges(1)">align-items: start;</p><p id="justify" onclick="applyChanges(2)">justify-items: start;</p>Essa propriedade está dentro do container.<hr><strong>&lt;CONTROLAR POSIÇÃO DO ELEMENTO <strong style="color: red;">RED</strong> NA GRID&gt;</strong>
 
+<div class="container3">
+    <div class="red3"><br>  RED </div>
+    <div class="green3"> </div>
+    <div class="blue3"> </div>
+    <div class="yellow3"> </div>
+</div>.red{ /* Propriedade dentro do elemento do bloco Vermelho */
+    width: 100%;height: 100%;background-color: red;
+
+<strong style="color: rgb(90, 90, 90);">Clique para alterar</strong><p id="gdOne" onclick="applyChangesGd(1)">grid-column:1;</p><p id="gdTwo" onclick="applyChangesGd(2)">grid-row:1;</p>
+} :: Veja como o Vermelho se move dentro do container
+ao alterar sua propriedade de <strong>grid-row</strong> e <strong>grid-column</strong>.
         </code>
     </pre>
 <script>
 var alignIs = 1;var justifyIs = 1;
+var colIs = 1; var rowIs = 1;
 
 function alignchange(){
     switch(alignIs){
@@ -171,6 +193,18 @@ function applyChanges(re){
     window.document.querySelector("#justify").innerHTML=""+justifychange()+""
     window.document.querySelector("#align").innerHTML=""+alignchange()+""
 }
+
+function applyChangesGd(re){
+    if(re===1){
+        if(colIs>1){colIs=1}else{colIs++}
+    }else{
+        if(rowIs>1){rowIs=1}else{rowIs++}
+    }
+    window.document.getElementById("gdOne").innerHTML=`grid-column:${colIs};`
+    window.document.getElementById("gdTwo").innerHTML=`grid-row:${rowIs};`
+    window.document.querySelector(".red3").style=`grid-row:${rowIs};grid-column:${colIs};`
+}
+
 </script>
 </body>
 </html>
