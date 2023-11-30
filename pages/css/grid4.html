@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+    <style>
+        .container{
+            width: 100px;height: 100px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "raio agua" "terra fogo";
+        }
+        .red{
+            width: 100%;height: 100%;
+            background-color: red;
+            grid-area: fogo;
+        }
+        .green{
+            width: 100%;height: 100%x;
+            background-color: rgb(0, 255, 64);
+            grid-area: terra;
+        }
+        .blue{
+            width: 100%;height: 100%;
+            background-color: rgb(17, 0, 255);
+            grid-area: agua;
+        }
+        .yellow{
+            width: 100%;height: 100%;
+            background-color: rgb(255, 208, 0);
+            grid-area: raio;
+        }
+        /*--------------------------------------------------*/
+        .container2{
+            width: 150px;height: 100px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: 50px 50px;
+            grid-template-areas: "raio1 vento1 terra1"
+            "fogo1 gelo1 agua1";
+        }/* "vento1 gelo1" */
+        .red2{
+            width: 100%;height: 100%;
+            background-color: red;
+            grid-area: fogo1;
+        }
+        .green2{
+            width: 100%;height: 100%x;
+            background-color: rgb(0, 255, 64);
+            grid-area: terra1;
+        }
+        .blue2{
+            width: 100%;height: 100%;
+            background-color: rgb(17, 0, 255);
+            grid-area: agua1;
+        }
+        .yellow2{
+            width: 100%;height: 100%;
+            background-color: rgb(255, 208, 0);
+            grid-area: raio1;
+        }
+        /*--------------------------------------------------*/
+        .container3{
+            width: 150px;height: 100px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            grid-template-rows: 50px 50px;
+            grid-template-areas: "raio2 raio2 terra2"
+            "fogo2 agua2 agua2";
+        }
+        .red3{
+            width: 100%;height: 100%;
+            background-color: red;
+            grid-area: fogo2;
+        }
+        .green3{
+            width: 100%;height: 100%x;
+            background-color: rgb(0, 255, 64);
+            grid-area: terra2;
+        }
+        .blue3{
+            width: 100%;height: 100%;
+            background-color: rgb(17, 0, 255);
+            grid-area: agua2;
+        }
+        .yellow3{
+            width: 100%;height: 100%;
+            background-color: rgb(255, 208, 0);
+            grid-area: raio2;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <code id="data"><!--&lt;&gt;-->
+<strong>&lt;CSS3 : GRID 4&gt;</strong><hr><strong>&lt;EXPERIMENTOS COM GRID TEMPLATE AREAS&gt;
+</strong>
+<strong>• Podemos definir um nome para cada elemento dentro
+do container, e assim organizando-os previamente.
+</strong>
+<strong>.red</strong>{ grid-area: <strong>fogo</strong>;}
+<strong>.green</strong>{ grid-area: <strong>terra</strong>;}
+<strong>.blue</strong>{ grid-area: <strong>agua</strong>;}
+<strong>.yellow</strong>{ grid-area: <strong>raio</strong>;}
+
+<strong>.container</strong>{ grid-template-areas: "<strong>raio agua</strong>" "<strong>terra fogo</strong>";}
+<div class="container">
+    <div class="red"> </div>
+    <div class="green"> </div>
+    <div class="blue"> </div>
+    <div class="yellow"> </div>
+</div>Veja como a sequência foi alterada para o padrão criado.
+<hr>Agora vamos alongar o <strong>.container</strong> utilizando
+grid-template-columns: <strong>repeat(3, 50px);</strong> que é equivalente a 
+<strong>50px 50px 50px</strong>, e depois adicionar 2 elementos que não
+declaramos propositalmente, <strong>gelo</strong> e <strong>vento</strong><div class="container2">
+    <div class="red2"> </div>
+    <div class="green2"> </div>
+    <div class="blue2"> </div>
+    <div class="yellow2"> </div>
+</div><strong>.container</strong>{
+    grid-template-areas: "<strong>raio</strong> <strong>vento</strong> <strong>terra</strong>"
+    "<strong>fogo</strong> <strong>gelo</strong> <strong>agua</strong>";
+}
+<strong>• Como o gelo e o vento não foram definidos em nenhum bloco,
+é deixado o espaço vazio.
+
+• Também pode utilizar repeat(auto-fill, 50px) para que seja
+definido dinamicamente quantas colunas ou linhas terá baseado
+na possibilidade de incluir mais 50px no tamanho da caixa/tela
+onde está apresentado.
+</strong><hr>Veja o que acontece ao definir um mesmo nome
+para dois espaços:
+<div class="container3">
+    <div class="red3"> </div>
+    <div class="green3"> </div>
+    <div class="blue3"> </div>
+    <div class="yellow3"> </div>
+</div><strong>.container</strong>{
+    grid-template-areas: "<strong>raio</strong> <strong>raio</strong> <strong>terra</strong>"
+    "<strong>fogo</strong> <strong>agua</strong> <strong>agua</strong>";
+}
+:: Dessa forma, os elementos são esticados, mas para isso,
+os mesmos precisam estar com <strong>align-items</strong> e <strong>justify-items</strong>
+como "stretch"(default), e sem nenhum tamanho fixo definido.
+
+        </code>
+    </pre>
+</body>
+</html>
