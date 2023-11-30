@@ -30,11 +30,11 @@
         }
         /*--------------------------------------------------*/
         .container2{
-            width: 100px;height: 100px;
+            width: 120px;height: 120px;
             border: 1px solid black;
             display: grid;
-            grid-template-columns: 80px 80px;
-    grid-template-rows: 40px 40px;
+            grid-template-columns: 60px 30px;
+            grid-template-rows: 30px 40px;
         }
         .red2{
             width: 100%;height: 100%;
@@ -57,8 +57,8 @@
             width: 200px;height: 200px;
             border: 1px solid black;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 150px;
+            grid-template-rows: 1fr 125px;
         }
         .red3{
             width: 100%;height: 100%;
@@ -83,8 +83,8 @@
         <code id="data"><!--&lt;&gt;-->
 <strong>&lt;CSS3 : GRID 2&gt;</strong><hr><strong>&lt;EXPERIMENTOS GRID TEMPLATE&gt;
 </strong>
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
+<strong>grid-template-columns:</strong> 1fr 1fr;
+<strong>grid-template-rows:</strong> 1fr 1fr;
 
 width e height de cada elemento: 100%;
 faz com que estique em todo espaço fracionado
@@ -94,34 +94,34 @@ faz com que estique em todo espaço fracionado
     <div class="green"> </div>
     <div class="blue"> </div>
     <div class="yellow"> </div>
-</div>
-<hr><strong>grid-template-columns:</strong> 60px 60px;
-<strong>grid-template-rows:</strong> 40px 40px;
+</div>esse container tem <strong>100px</strong> por <strong>100px</strong>
+<hr><strong>grid-template-columns:</strong> 60px<strong style="color: gray;">(largura 1º coluna)</strong> 30px<strong style="color: gray;">(largura 2º coluna)</strong>;
+<strong>grid-template-rows:</strong> 30px<strong style="color: gray;">(altura 1º linha)</strong> 40px<strong style="color: gray;">(altura 2º linha)</strong>;
 ::
-No container com tamanho já definido, as celulas
-vão se distorcer pela propriedade padrão <strong>"stretch" </strong>.
+<strong>Sempre respectivamente,</strong>
+cada valor columns define a largura de sua coluna toda,
+cada valor rows define a altura de sua linha inteira.
+<div class="container2" style="color: purple;">
+    <div class="red2" style="color: white;">60px<br>largura</div>
+    <div class="green2">30px<br>lar</div>
+    <div class="blue2" style="color: white;">40px<br>altura</div>
+    <div class="yellow2">40px<br>alt</div>altura restante:<br>30+40=70px =><br>sobra: 50px
+</div><p style="display: inline;">esse container tem <strong>120px</strong> por <strong>120px</strong></p><hr><strong>grid-template-columns:</strong> 1fr 150px;
+<strong>grid-template-rows:</strong> 1fr 125px;
 
-<div class="container2">
-    <div class="red2"> </div>
-    <div class="green2"> </div>
-    <div class="blue2"> </div>
-    <div class="yellow2"> </div>
-</div><hr><strong>grid-template-columns:</strong> 1fr 1fr;
-<strong>grid-template-rows:</strong> 1fr 1fr;
-
-<strong>Ao dobrar o tamanho do container</strong> ::
+<strong>Ao dobrar o tamanho do container inicial</strong> ::
 
 <div class="container3">
-    <div class="red3"> </div>
-    <div class="green3"> </div>
-    <div class="blue3"> </div>
-    <div class="yellow3"> </div>
+    <div class="red3" style="color: white;">• 1fr<br>altura<br>• 1fr<br>largura</div>
+    <div class="green3">• 150px de largura<br>para essa coluna<br>• 1fr de altura<br>aplicará "stretch" no<br>espaço restante</div>
+    <div class="blue3" style="color: white;">• 125px<br>altura<br>• 1fr<br>largura</div>
+    <div class="yellow3">• 125px de altura<br>• 150px largura</div>
 </div>
 
 No container com tamanho já definido, mas 
-com celulas em 1fr as celulas vão se distorcer 
-para preencher o novo espaço utilizando a 
-propriedade padrão "stretch".
+com celulas em <strong>"1fr"</strong> as celulas vão se distorcer 
+para preencher o espaço restante utilizando a 
+propriedade padrão <strong>"stretch"</strong>.
         </code>
     </pre>
 </body>
