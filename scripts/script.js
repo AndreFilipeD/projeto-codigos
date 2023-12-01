@@ -19,7 +19,7 @@ function menu(c){
     }else if(c==4){// MOSTRAR HTML5 + CSS
         cleaner = window.document.querySelector('.d')//4
         cleaner.style='display: flex'
-        window.document.querySelector("#showContent").innerHTML="HTML5 + CSS"
+        window.document.querySelector("#showContent").innerHTML="HTML5 + CSS3"
         window.document.querySelector("#showContent").style="background-color: #19c994;"
     }else if(c==5){// MOSTRAR HTML5 + JAVASCRIPT
         cleaner = window.document.querySelector('.e')//5
