@@ -75,6 +75,7 @@ function menu(c){
 }
 
 function applyIndex(){
+    window.scrollTo(0,0)
     window.document.querySelector("#showContent").innerHTML=actual
     for(c in storage){
         storage[c].setAttribute('onclick',`uploadName("${storage[c].innerHTML}","${c}")`)
@@ -83,10 +84,13 @@ function applyIndex(){
 }
 
 function uploadName(nameIs, meAre){
+    window.scrollTo(0,0)
     for(c in storage){
         storage[c].style=""
     }
     window.document.querySelector("#showContent").innerHTML=actual+" > "+nameIs
-    storage[meAre].style="background-color: white;color: black;outline: 1px solid white; border-top-left-radius: 10px;box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);"//"background-color: #d48a44"
+    storage[meAre].style="background-color: white;color: black;outline: 1px groove white; border-top-left-radius: 20px;border-bottom-left-radius: 20px;box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);padding:10px;margin:10px 0px 10px 10px";
+    storage[meAre-1].style="padding: 2px;border-bottom-right-radius: 50px;";
+    storage[Number(meAre)+1].style="padding: 2px;border-top-right-radius: 50px;border:1px solid black";
+    //storage[meAre].innerHTML+=
 }
-//window.alert(storage[1].innerHTML)

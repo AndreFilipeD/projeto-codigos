@@ -8,7 +8,7 @@
 }
 body{
     background-color: black;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 pre > code{
     font-family: monospace;
