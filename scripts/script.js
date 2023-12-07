@@ -77,12 +77,16 @@ function menu(c){
 function applyIndex(){
     window.document.querySelector("#showContent").innerHTML=actual
     for(c in storage){
-        storage[c].setAttribute('onclick',`uploadName("${storage[c].innerHTML}")`)
+        storage[c].setAttribute('onclick',`uploadName("${storage[c].innerHTML}","${c}")`)
+        storage[c].style=""
     }
-    window.alert(storage.length)
 }
 
-function uploadName(nameIs){
+function uploadName(nameIs, meAre){
+    for(c in storage){
+        storage[c].style=""
+    }
     window.document.querySelector("#showContent").innerHTML=actual+" > "+nameIs
+    storage[meAre].style="background-color: white;color: black;outline: 1px solid white; border-top-left-radius: 10px;box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);"//"background-color: #d48a44"
 }
 //window.alert(storage[1].innerHTML)
