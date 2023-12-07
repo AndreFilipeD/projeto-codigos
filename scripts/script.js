@@ -4,18 +4,25 @@ var storage
 
 function clean(){
     cleaner = window.document.querySelector('.a')
+    window.document.querySelector("#html5").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.b')
+    window.document.querySelector("#css3").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.c')
+    window.document.querySelector("#javas").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.d')
+    window.document.querySelector("#htcs").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.e')
+    window.document.querySelector("#htjs").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.f')
+    window.document.querySelector("#csjs").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.g')
+    window.document.querySelector("#notas").style="none"
     cleaner.style='display: none'
 }
 
@@ -27,6 +34,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "HTML5"
             window.document.querySelector("#showContent").style="background-color: #ff4400;"
+            window.document.querySelector("#html5").style="box-shadow:0px 0px 30px #ff4400;"
             storage = window.document.getElementsByClassName("ithtml")
             break;
         case 2:// MOSTRAR CSS3
@@ -34,6 +42,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "CSS3"
             window.document.querySelector("#showContent").style="background-color: #0087e0;"
+            window.document.querySelector("#css3").style="box-shadow:0px 0px 30px #0087e0;"
             storage = window.document.getElementsByClassName("itcss3")
             break;
         case 3:// MOSTRAR JAVASCRIPT
@@ -41,6 +50,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "JAVASCRIPT"
             window.document.querySelector("#showContent").style="background-color: #f0bc11;"
+            window.document.querySelector("#javas").style="box-shadow:0px 0px 30px #f0bc11;"
             storage = window.document.getElementsByClassName("itjs")
             break;
         case 4:// MOSTRAR HTML5 + CSS3
@@ -48,6 +58,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "HTML5 + CSS3"
             window.document.querySelector("#showContent").style="background-color: #19c994;"
+            window.document.querySelector("#htcs").style="box-shadow:0px 0px 30px #19c994;"
             storage = window.document.getElementsByClassName("ithtmlcss3")
             break;
         case 5:// MOSTRAR HTML5 + JAVASCRIPT
@@ -55,6 +66,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "HTML5 + JAVASCRIPT"
             window.document.querySelector("#showContent").style="background-color: #ff9100;"
+            window.document.querySelector("#htjs").style="box-shadow:0px 0px 30px #ff9100;"
             storage = window.document.getElementsByClassName("ithtmljs")
             break;
         case 6:// MOSTRAR CSS3 + JAVASCRIPT
@@ -62,6 +74,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "CSS3 + JAVASCRIPT"
             window.document.querySelector("#showContent").style="background-color: #cc00ff;"
+            window.document.querySelector("#csjs").style="box-shadow:0px 0px 30px #cc00ff;"
             storage = window.document.getElementsByClassName("itcss3js")
             break;
         case 7:// MOSTRAR NOTAS
@@ -69,6 +82,7 @@ function menu(c){
             cleaner.style='display: flex'
             actual = "NOTAS"
             window.document.querySelector("#showContent").style="background-color: #464646;"
+            window.document.querySelector("#notas").style="box-shadow:0px 0px 30px #464646;"
             storage = window.document.getElementsByClassName("itnotas")
             break;
     }applyIndex()
