@@ -103,7 +103,7 @@ main{
     flex-direction: column;
     border: 1px solid black;
     height: 100vh;
-    background-color: rgb(102, 102, 102)/*rgb(145, 10, 10);*/
+    background-color: #444444;
 }
 #menu > a{
     color: white;
