@@ -104,8 +104,9 @@ function uploadName(nameIs, meAre){
     }
     window.document.querySelector("#showContent").innerHTML=actual+" > "+nameIs
     storage[meAre].style="background-color: white;color: black;border: none;outline: 3px double white; border-top-left-radius: 20px;border-bottom-left-radius: 20px;box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);padding:2px;margin:10px 0px 10px 10px;text-align: center;font-weight: bolder;font-size: 1em;";
-    if(!(meAre-2<0)){storage[meAre-2].style="padding: 3px;font-size: .8em;background-color: #777777;"}
-    if(!(meAre-1<0)){storage[meAre-1].style="padding: 2px;border-bottom-right-radius: 50px;font-size: .75em;background-color: #666666;";}
-    storage[Number(meAre)+1].style="padding: 2px;border-top-right-radius: 50px;border:1px solid black;font-size: .75em;background-color: #666666;";
-    storage[Number(meAre)+2].style="padding: 3px;font-size: .8em;background-color: #777777;";
+    if(!(meAre-2<0)){storage[meAre-2].style="padding: 3px;font-size: .8em;"}
+    if(!(meAre-1<0)){storage[meAre-1].style="padding: 2px;border-bottom-right-radius: 50px;font-size: .75em;";}
+    storage[Number(meAre)+1].style="padding: 2px;border-top-right-radius: 50px;border:1px solid black;font-size: .75em;";
+    storage[Number(meAre)+2].style="padding: 3px;font-size: .8em;";
+
 }
