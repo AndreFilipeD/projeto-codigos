@@ -86,7 +86,7 @@ function menu(c){
             storage = window.document.getElementsByClassName("itnotas")
             break;
     }applyIndex()
-}projeto-codigos/pages/javascript/array.html
+}//projeto-codigos/pages/javascript/array.html
 
 function applyIndex(){
     window.scrollTo(0,0)
