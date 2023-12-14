@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+<pre>
+<code id="data">
+<strong>&lt;JS : OBJETOS&gt; </strong><hr><strong>&lt;INICIALIZAÇÃO&gt;</strong>
+Objetos podem ser declarados com var, let e const
+
+<strong>var roupa = {</strong>
+    <strong>nome:</strong>"Camisa social", //string
+    <strong>cores:</strong>["branco","preto"] //array
+    <strong>peso:</strong>"300g", //string
+    <strong>tamanho:40,</strong> //number
+    <strong>propriedades: function(){</strong>
+        return this.cor + ' ' + this.peso + ' ' + this.tamanho
+    <strong>}</strong> //retorna: branco 300g 44
+    <strong>estampa:</strong>{ // objeto dentro do objeto
+        <strong>altura:10,</strong> dentro do objeto
+        <strong>largura:15,</strong> //number dentro do objeto
+        <strong>desenho:"dragão"</strong> //string dentro do objeto
+    }
+<strong>}</strong>
+
+dentro de um objeto, podemos armazenar
+Numeros, Strings, Arrays, funções e até 
+outros objetos contendo tudo isso
+<hr><strong>&lt;ACESSANDO CONTEUDO&gt; </strong>
+
+Agora vamos acessar os dados declarados no objeto acima ::
+
+window.alert(roupa.nome) ::::::::::::: <strong>"camisa social"</strong>
+window.alert(roupa.cores[0]) ::::::::: <strong>"branco"</strong>
+window.alert(roupa.peso) ::::::::::::: <strong>"300g"</strong>
+window.alert(roupa.tamanho) :::::::::: <strong>40</strong>
+window.alert(roupa.propriedades()) ::: <strong>"branco 300g 44"</strong>
+window.alert(roupa.estampa.desenho) :: <strong>"dragão"</strong><hr><strong>&lt;CLONANDO OBJETOS&gt; </strong>
+Considere os seguintes arrays de objetos ::
+
+<strong>frutas=[</strong> //array com 2 objetos
+<strong>{nome:"banana",quantidade:3,peso:"70g"},
+{nome:"abacaxi",quantidade:1,peso:"200g"}
+]
+</strong>
+<strong>estoqueFruta=[]</strong>
+<hr>Utilizando :: <strong>(Object.assign{},</strong> /*objeto a ser clonado*/ <strong>)</strong>
+
+Vamos clonar o abacaxi para o estoqueFruta ::
+
+<strong>estoqueFruta.push(Object.assign({},frutas[1])); </strong>
+//Inclui objeto abacaxi na ultima posição da lista.
+
+<strong>estoqueFruta.unshift(Object.assign({},frutas[1]));</strong>
+//Inclui objeto abacaxi na primeira posição da lista.<hr>Também pode inserir novas propriedades no clone do objeto
+utilizando dentro dos colchetes ::
+
+<strong>(Object.assign({altura:"20cm"},frutas[1]))</strong>
+
+</code>
+</pre>
+</body>
+</html>
