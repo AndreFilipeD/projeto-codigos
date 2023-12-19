@@ -4,3 +4,6 @@ dispositivos, falta explicar sua estrutura.
 
 <CSS + JAVASCRIPT : ALTERAÇÃO>
 Organizar e renomear categorias.
+
+Solução para instalação do REACT:
+Em vez de , execute-o como . Se o erro persistir, execute 'npm install -g npm'. Em seguida, execute novamente.create-react-app my-appnpx create-react-app my-appnpx create-react-app my-app

@@ -22,6 +22,9 @@ function clean(){
     window.document.querySelector("#csjs").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.g')
+    window.document.querySelector("#react").style="none"
+    cleaner.style='display: none'
+    cleaner = window.document.querySelector('.h')
     window.document.querySelector("#notas").style="none"
     cleaner.style='display: none'
 }
@@ -77,8 +80,16 @@ function menu(c){
             window.document.querySelector("#csjs").style="box-shadow:0px 0px 30px #cc00ff;"
             storage = window.document.getElementsByClassName("itcss3js")
             break;
-        case 7:// MOSTRAR NOTAS
+        case 7:// MOSTRAR REACT
             cleaner = window.document.querySelector('.g')//6
+            cleaner.style='display: flex'
+            actual = "REACT"
+            window.document.querySelector("#showContent").style="background-color: #30c8e3;"
+            window.document.querySelector("#react").style="box-shadow:0px 0px 30px #30c8e3;"
+            storage = window.document.getElementsByClassName("itreact")
+            break;
+        case 8:// MOSTRAR NOTAS
+            cleaner = window.document.querySelector('.h')//6
             cleaner.style='display: flex'
             actual = "NOTAS"
             window.document.querySelector("#showContent").style="background-color: #464646;"
@@ -86,7 +97,7 @@ function menu(c){
             storage = window.document.getElementsByClassName("itnotas")
             break;
     }applyIndex()
-}//projeto-codigos/pages/javascript/array.html
+}
 
 function applyIndex(){
     window.scrollTo(0,0)
