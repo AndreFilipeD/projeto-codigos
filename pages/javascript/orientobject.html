@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <strong>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </strong>
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : ORIENTAÇÃO A OBJETOS&gt;</strong><hr><strong>&lt;CLASSE E METODO CONSTRUTOR&gt;</strong>
+<strong>
+    class Pessoa {
+        constructor(nome, idade){
+            this.name = nome
+            this.age = idade
+        }
+    }
+</strong>
+:: Acabamos de criar uma nova <strong>classe de objetos</strong>, para que
+assim quando necessário, podemos instancia-lo<strong>(cria-lo)</strong> quantas 
+vezes quiser e definir suas propriedades durante a criação 
+utilizando o metodo <strong>constructor</strong> dentro da classe.
+
+o metodo constructor receberá em sua criação como parâmetro
+o <strong>nome</strong> e a <strong>idade</strong>, e atribuirá nas variaveis respectivamente
+<strong>name</strong> e <strong>age</strong>, conforme definido no metodo <strong>constructor</strong>.<hr><strong>&lt;CRIANDO OBJETOS&gt;</strong>
+
+<strong>let p1 = new Pessoa("andré", 28)</strong>
+<strong>let p2 = new Pessoa("maria", 38)</strong>
+<strong>let p3 = new Pessoa("joao", 18)</strong>
+
+:: com a classe e o metodo construtor já definido acima, apenas
+isso já é o suficiente para criar 3 objetos com <strong>name</strong> e <strong>age</strong>
+atribuidos.
+
+<strong>window.alert(p1.name)</strong> :: resultado "andré"
+<strong>window.alert(p2.age)</strong> :: resultado 38
+</code>
+</pre>
+</body>
+</html>
