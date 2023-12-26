@@ -11,20 +11,58 @@
     <pre>
         <code id="data">
 <strong>&lt;JS : FUNÇÕES&gt;</strong><hr><strong>&lt;STANDARD&gt;</strong>
-
 <strong>
 function somar(x, y){
     return x + y;
 }</strong>
-    
+:: metodo tradicional de criação de funções em javascript
 <hr><strong>&lt;ARROW FUNCTION&gt;</strong>
-
 <strong>
 const somar = (x, y) => {
     return x + y;
 }</strong>
+:: É declarada igual uma variavel, mas é uma função
+<strong>
+<hr>const somar = (x, y) => x + y;
+</strong>:: Pode resumir, caso declare em uma só linha, e não escreva 
+<strong>return</strong> e nem coloque as chaves <strong>{}</strong> sobre o conteúdo.
 
-<hr><strong>window.alert(somar(10, 5))</strong> :: Todas retornam 15
+<hr><strong>const duplicar = x => x * 2;
+</strong>:: Pode resumir ainda mais, caso seja só um parâmetro de entrada.
+
+<hr>essa mesma função acima de duplicar em standard 
+seria escrita assim ::
+<strong>
+function duplicar(x){
+    return x * 2;
+}
+</strong><hr><strong>&lt;FUNÇÃO DENTRO DE UM OBJETO&gt;</strong>
+
+<strong>
+let pessoa = {
+    nome: 'andre',
+    sobrenome: 'domingues',
+    idade: 28,
+    nomeCompleto: function(){
+        return this.nome + ' ' + this.sobrenome
+    }
+}</strong>
+</strong>
+
+:: Utilizando a propriedade this, pode acessar os valores
+do próprio objeto, e assim criar uma função para retornar
+valores.
+
+Para retorna-la execute como o exemplo abaixo ::
+
+<strong>window.alert(pessoa.nomeCompleto())</strong>
+
+:: Lembrando que se utilizar uma arrow function dentro
+de um objeto, não terá acesso ao <strong>this.</strong>, e
+por isso não poderá acessas as propriedades do objeto.
+</strong>
+<strong>
+
 
 
 </code>
