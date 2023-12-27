@@ -10,44 +10,34 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;JS : ORIENTAÇÃO A OBJETOS 3&gt;</strong><hr><strong>&lt;GETTER&gt;</strong>
+<strong>&lt;JS : ORIENTAÇÃO A OBJETOS 3&gt;</strong><hr><strong>&lt;SETTER&gt;</strong>
 
-Considere a seguinte classe ::
-<strong>
-    class Person{
-        age = 10
-        steps = 0
-        constructor(primeiroNome, segundoNome){
-            this.firstName = primeiroNome
-            this.secondName = segundoNome
-        }
-        takeAstep(){
-            this.steps++
-        }
+Continuando o artigo anterior: <a href="orientobject2.html" target="cont">Orientação a Objetos 2</a>
+vamos adicionar dentro de class ::
+
+<strong>age = 10</strong> // age já era 10.
+    <strong>
+set age(x){
+    if(typeof x =='number'){
+        this._age = x
     }
-</strong>
-:: Para utilizar getter (e setter) geralmente utilizamos
-o nome da própria variavel na função, e ai comunalmente 
-adcionamos um "_" no inicio do nome da variavel para
-não haver conflito, conforme exemplo abaixo ::
+}</strong>
 
-<strong>_age = 10;</strong><hr>agora vamos criar dentro da class, o metodo get ::
-<strong>
-get age(){
-    return this._age;
-}
-p1 = new Person("João", "Pedro");
-</strong>
-<strong>window.alert(p1.age);</strong> :: resultado será 10, utilizando get, podemos
-processar a variavel inicialmente dentro da classe do objeto
-e depois retornar algum valor já otimizado para determinadas
-situações.<hr>Agora vamos criar outro get dentro de class para gerar um nome completo ::
-<strong>
-get fullName(){
-    return `${this.firstName} ${this.secondName}`;
-}
+<strong>p1.age = abc</strong>
 
-window.alert(p1.fullName)</strong> :: retonará "João Pedro"
+<strong>window.alert(p1.age)</strong> :: Mostrará o valor inicial de age que já era <strong>10</strong>, pois
+ao tentarmos alterar <strong>p1.age</strong> para <strong>abc</strong>, o mesmo não era do
+<strong>tipo numerico</strong>, conforme definimos dentro de <strong>set</strong> ... então
+ele não faz nada.
+
+porem ::
+
+<strong>p1.age = 25</strong>
+
+<strong>window.alert(p1.age)</strong> :: resultado 25
+
+Agora ele passou no teste numerico e permitiu ser modificado.<hr>
+
 </code>
 </pre>
 </body>
