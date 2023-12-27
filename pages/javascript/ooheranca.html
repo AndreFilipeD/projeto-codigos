@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <strong>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </strong>
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : ORIENTAÇÃO A OBJETOS HERANÇA&gt;</strong><hr><strong>&lt;HERDANDO INFORMAÇÕES DA CLASSE PAI&gt;</strong>
+Para exemplificar o conceito de herança, vamos criar uma
+classe para pessoas ::
+<strong>
+class Pessoa{
+    age = 0
+    constructor(nome){
+        this name = nome
+    }
+}</strong><hr>:: Todo <strong>aluno</strong> é uma <strong>pessoa</strong>, correto? então se criar-mos uma
+classe para Alunos, podemos extender o que já foi criado na classe
+pessoas, correto?
+
+<strong>class Aluno extends Pessoa{
+    escola = 'senai'
+    constructor(nome, id){
+        super(nome)
+        this.id = id
+    }
+}</strong>
+
+:: Como pode observar, o <strong>aluno</strong> já tem um nome que foi herdado
+da classe pai <strong>Pessoa</strong>, e para acessa-lo utilizamos <strong>super()</strong> no
+construtor da classe <strong>Aluno</strong>. também acrescentamos o campo escola
+e o <strong>ID</strong> do aluno. no caso de <strong>age</strong>, não há necessidade de utilizar
+o <strong>super()</strong>, pois ele foi declarado fora do construtor de <strong>Pessoa</strong>.
+
+<strong>super</strong> sempre acessará propriedades do Pai, podendo
+pegar valores e até funções declaradas pelo mesmo,
+para que possa ser utilizada pelo filho.
+<hr>
+
+
+
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <strong>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </strong>
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : ORIENTAÇÃO A OBJETOS STATIC&gt;</strong><hr><strong>&lt;ENTENDENDO STATIC&gt;</strong>
+<strong>
+class Person{
+    static hands = 2
+    constructor(nome){
+        this.name = nome
+    }
+    
+    static sayHi(){
+        window.alert(`Olá, ${this.name}`)
+    }
+}
+</strong>
+
+:: A declaração <strong>static</strong> sinaliza que a classe
+<strong>Person</strong> terá determinado valor, então, para
+verificarmos quantas mãos qualquer <strong>Person</strong> tem devemos fazer ::
+
+<strong>Person.hands</strong> ao invez de <strong>this.hands</strong>
+:: Como se trata de um valor <strong>static</strong>, está referenciando a classe
+do objeto, e não o objeto em si, por isso <strong>this</strong> não funciona.
+<hr>Também podemos alterar os valores <strong>static</strong>, mas ao invez de ::
+
+<strong>this.hands = 3;</strong>
+
+utilizamos ::
+
+<strong>Person.hands = 3;</strong><hr>E ao tentar utilizar o metodo <strong>sayHi();</strong>
+retorno :: <strong>'Olá Person'</strong>
+
+:: Como se trata de uma função estática, ao coletar o <strong>this.name</strong>
+, pegamos o nome da classe, já que se refere a classe toda e
+não a um objeto gerado a partir da classe.
+</code>
+</pre>
+</body>
+</html>
