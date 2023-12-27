@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <strong>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </strong>
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;JS : ORIENTAÇÃO A OBJETOS 3&gt;</strong><hr><strong>&lt;GETTER&gt;</strong>
+
+Considere a seguinte classe ::
+<strong>
+    class Person{
+        age = 10
+        steps = 0
+        constructor(primeiroNome, segundoNome){
+            this.firstName = primeiroNome
+            this.secondName = segundoNome
+        }
+        takeAstep(){
+            this.steps++
+        }
+    }
+</strong>
+:: Para utilizar getter (e setter) geralmente utilizamos
+o nome da própria variavel na função, e ai comunalmente 
+adcionamos um "_" no inicio do nome da variavel para
+não haver conflito, conforme exemplo abaixo ::
+
+<strong>_age = 10;</strong><hr>agora vamos criar dentro da class, o metodo get ::
+<strong>
+get age(){
+    return this._age;
+}
+p1 = new Person("João", "Pedro");
+</strong>
+<strong>window.alert(p1.age);</strong> :: resultado será 10, utilizando get, podemos
+processar a variavel inicialmente dentro da classe do objeto
+e depois retornar algum valor já otimizado para determinadas
+situações.<hr>Agora vamos criar outro get dentro de class para gerar um nome completo ::
+<strong>
+get fullName(){
+    return `${this.firstName} ${this.secondName}`;
+}
+
+window.alert(p1.fullName)</strong> :: retonará "João Pedro"
+</code>
+</pre>
+</body>
+</html>
