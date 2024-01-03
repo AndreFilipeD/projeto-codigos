@@ -22,9 +22,12 @@ function clean(){
     window.document.querySelector("#csjs").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.g')
-    window.document.querySelector("#react").style="none"
+    window.document.querySelector("#types").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.h')
+    window.document.querySelector("#react").style="none"
+    cleaner.style='display: none'
+    cleaner = window.document.querySelector('.i')
     window.document.querySelector("#notas").style="none"
     cleaner.style='display: none'
 }
@@ -80,23 +83,32 @@ function menu(c){
             window.document.querySelector("#csjs").style="box-shadow:0px 0px 30px #cc00ff;"
             storage = window.document.getElementsByClassName("itcss3js")
             break;
-        case 7:// MOSTRAR REACT
-            cleaner = window.document.querySelector('.g')//6
+        case 7:// MOSTRAR TYPESCRIPT
+            cleaner = window.document.querySelector('.g')//7
+            cleaner.style='display: flex'
+            actual = "TYPESCRIPT"
+            window.document.querySelector("#showContent").style="background-color: #3c3eb8"
+            window.document.querySelector("#types").style="box-shadow:0px 0px 30px #3c3eb8"
+            storage = window.document.getElementsByClassName("ittypes")
+            break;
+        case 8:// MOSTRAR REACT
+            cleaner = window.document.querySelector('.h')//8
             cleaner.style='display: flex'
             actual = "REACT"
             window.document.querySelector("#showContent").style="background-color: #30c8e3;"
             window.document.querySelector("#react").style="box-shadow:0px 0px 30px #30c8e3;"
             storage = window.document.getElementsByClassName("itreact")
             break;
-        case 8:// MOSTRAR NOTAS
-            cleaner = window.document.querySelector('.h')//6
+        case 9:// MOSTRAR NOTAS
+            cleaner = window.document.querySelector('.i')//9
             cleaner.style='display: flex'
             actual = "NOTAS"
             window.document.querySelector("#showContent").style="background-color: #464646;"
             window.document.querySelector("#notas").style="box-shadow:0px 0px 30px #464646;"
             storage = window.document.getElementsByClassName("itnotas")
             break;
-    }applyIndex()
+    }
+    applyIndex()
 }
 
 function applyIndex(){
