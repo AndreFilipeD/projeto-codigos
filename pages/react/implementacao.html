@@ -36,7 +36,25 @@ Agora vá  para o diretório do projeto e inicie o servidor utilizando ::
 
 também no prompt, lembre-se de encerrar o servidor ::
 Pressione junto :: <strong>ctrl + c</strong> :: e após ser perguntado,
-confirme se quer encerra-lo utilizando <mark>(S/N) </mark>
+confirme se quer encerra-lo utilizando <mark>(S/N) </mark><hr><strong>&lt;FINALIZAR PORTA 3000 OU OUTRA&gt;</strong>
+
+Se acontecer de você fechar tudo e se esquecer de finalizar a porta
+do servidor, realize o seguinte processo ::
+
+<strong>npx kill-port 3000</strong> :: e confirme a "instalação" da
+finalização do processo, PRONTO! estará devidamente morto.
+<hr>
+Uma forma de remover um projeto react é ir pelo prompt até a pasta do
+projeto e digitar o seguinte código ::
+<strong>"rmdir /s node_modules"</strong>
+
+A outra seria utilizando Yarn ::
+
+Basta acessar a pasta do projeto pelo terminal e executar o comando
+"<strong>yarn cache clean"</strong> ou <strong>"npm cache clean"</strong> para limpar o cache dos
+pacotes instalados. Em seguida, execute o comando <strong>"yarn install"</strong>
+ou <strong>"npm install"</strong> para reinstalar as dependências do projeto.
+Isso deve remover a pasta node_modules antiga e criar uma nova.
 
 </code>
 </pre>

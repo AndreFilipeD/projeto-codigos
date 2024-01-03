@@ -7,3 +7,12 @@ Organizar e renomear categorias.
 
 Solução para instalação do REACT:
 Em vez de , execute-o como . Se o erro persistir, execute 'npm install -g npm'. Em seguida, execute novamente.create-react-app my-appnpx create-react-app my-appnpx create-react-app my-app
+
+________________________________
+Monitor Profile Switcher - programa de troca de janelas top alexa
+
+DWService :: https://www.dwservice.net/
+
+Crie um backup de todos os programas, coisas e repositórios importantes
+se vai acabar precisando e vai se esquecer, qualquer coisa pelomenos
+anote aqui para se lembrar...
