@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : FUNÇÕES&gt; </strong><hr>Essa função transforma o primeiro caractere de uma string
+em maiusculo ::
+
+function firstLetterUpperCase(name<mark>: string</mark>){
+    let firstLetter = name.charAt[0].toUpperCase();
+    return firstLetter+name.substring(1);
+}
+
+<strong>firstLetterUpperCase('andré')</strong> :: Resultado 'André' ::
+
+Mas se utilizarmos um numero no lugar da string teremos um erro,
+pois o processamento da função é feito sobre uma string. ex ::
+
+<strong>firstLetterUpperCase(<mark>90</mark>)</strong> :: erro
+
+Então, o <mark>: string</mark> inserido dentro da declaração da função acima
+previne que esse tipo de problema ocorra.<hr>
+</code>
+</pre>
+</body>
+</html>

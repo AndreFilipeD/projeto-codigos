@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : TIPAGEM&gt;</strong><hr><strong>&lt;TIPAGEM PRIMITIVA&gt;</strong>
+<strong>
+let nome<mark>: string</mark> = 'andré';
+let idade<mark>: number</mark> = 90;
+let programador<mark>: boolean</mark> = false;</strong>
+
+:: Utilizamos esses 3 confirmadores de tipagem, mas não são
+exatamente necessarios nesses 3 casos, pois o tipo especifico
+já é bem <strong>"esclarecido"</strong> pelo próprio nome da variavel definido.<hr><strong>&lt;ARRAY&gt;</strong>
+
+Numerico ::
+
+let numeros: number[] = [10,12,33,54,78] :: array numerico <mark>*recomendado*</mark>
+let numeros: Array&lt;number&gt; = [10,12,33,54,78] :: array numerico alternativo
+
+String ::
+
+let nomes: string[] = ['pano','pedra','carro'] :: array string <mark>*recomendado*</mark>
+let nomes: Array&lt;string&gt; = ['pano','pedra','carro'] :: array string alternativo
+
+Any ::
+
+<strong>let palavras: any = ['pano','pedra','carro']</strong> :: qualquer
+
+<strong>palavras.push('566') :: </strong>daria um erro, pois o typescript 
+detectaria um padrão de string no array palavras, porem a
+categoria <strong>any</strong> diz que ele não deve se preocupar com
+a typagem da variavel, logo esse array seria compilado normalmente.
+
+</strong>
+</code>
+</pre>
+</body>
+</html>

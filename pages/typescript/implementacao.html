@@ -9,7 +9,41 @@
     <pre>
         <code id="data">
 <strong>&lt;TYPESCRIPT : INSTALAÇÃO&gt; </strong>
+Para instalar o Typescript, precisamos do NodeJs instalado na maquina,
 
+Para isso basta acessar o site: <a href="https://nodejs.org/en/download/" target="_blank" style="background-color: blue;color: white;border-radius: 20px;padding: 3px;font-weight: bolder;">NOJE JS OFICIAL</a>
+
+E realizar a instalação da versão LTS sempre.
+<hr>Após isso, no terminal digite <strong>npm --version</strong> para verificar
+se a instalação do NODE foi efetuada com sucesso.<hr>Agora estamos prontos para instalar o Typescript ::
+
+<strong>npm install -g typescript</strong> ::
+
+Utilize esse comando no terminal, para fazer o download
+e instalação do typescript pelo Node em sua maquina.
+
+<strong>tsc --version</strong> :: para testar se a instação foi efetuada com sucesso;<hr>Arquivos typescript são criados com final ts ex ::
+
+<strong>script.ts</strong>
+
+Geralmente criamos uma pasta <strong>src</strong> para armazena-lo,
+e depois o compilamos para <strong>javascript</strong> na pasta public.<hr>Dentro da pasta com o arquivo Typescript já criado, devemos
+abrir o terminal no diretório
+
+<strong>tsc script.ts</strong> :: compila o typescript para javascript
+
+alguma das informações incluidas no typescript vão sumir do
+arquivo final javascript, pois ele já converteu no javascript.<hr><strong>tsc script.ts --outDir public</strong> ::
+
+Considere o comando no prompt acima para definir o nome da pasta
+onde será compilado o código javascript, onde public é o nome
+da pasta.<hr>Recomendado que sempre compile assim ::
+
+<strong>tsc script.ts --noEmitOnError</strong> ::
+
+Dessa forma ele não vai gerar o javascript ao ser encontrado um
+erro na codificação do arquivo, que podes ser corrigido ainda no
+<strong>Typescript</strong>
 </code>
 </pre>
 </body>

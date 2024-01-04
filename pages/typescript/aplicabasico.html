@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : RAZÃO&gt;</strong>
+
+O motivo do <storng>Typescript</storng> é conseguir de maneira mais eficiente
+identificar e tratar erros de tipagem, ou seja, ele ajuda na
+versão final do código, corrigindo possiveis problemas de tipos e
+dando ferramentas para garantir que o código final não esteja
+falhando em algum momento da execução.
+
+<strng>Typescript</strng> e <strong>Javascript</strong> se escrevem da mesma forma, porem o 
+<strong>Typescript</strong> tem novos metodos para auxilio no tratamento da 
+tipagem dos valores processados.
+<hr><strong>&lt;COMANDOS DE TIPAGEM&gt;</strong>
+let numero = window.document.getElementById('numb') <strong>as HTMLInputElement</strong>;
+
+<strong>as HTMLInputElement;</strong>
+
+Utilizamos esse trecho acima para definir que a variavel
+numero está recebendo exatamente um "tipo de entrada HTML",
+
+dessa forma, na hora de executar o código, não haverá duvidas
+que está correto o processamento para entrada da variavel numero.
+<hr>Agora considere a seguinte função ::
+<strong>
+function somar(n1, n2){
+    return n1 + n2
+}
+</strong>
+No typescript, isso vai gerar um alerta, pois n1 e n2 não foram
+especificados como numerico, e isso pode ocarionar um problema...
+
+Para solucionar isso, adicionamos o seguinte ::
+<strong>
+function somar(n1<mark>: number</mark>, n2<mark>: number</mark>){
+    return n1 + n2
+}
+</strong>
+seguindo essa ideia, caso não fosse uma soma e sim um string,
+poderiamos utilizar ::
+
+<strong>n1<mark>: string</mark>
+</strong><hr>Agora considere o seguinte caso ::
+
+<strong>res.innerHTML = somar(10, 20) </strong>
+
+:: vai aletar possivel erro, porque
+um elemento HTML sempre espera um retorno string, sendo que o 
+retorno nesse caso seria numerico, então precisamos converter o
+resultado final em string conforme o exemplo abaixo ::
+
+<strong>res.innerHTML = somar(10, 20).toString() </strong>
+
+</code>
+</pre>
+</body>
+</html>
