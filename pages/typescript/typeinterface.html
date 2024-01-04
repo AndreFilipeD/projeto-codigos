@@ -8,7 +8,55 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;TYPESCRIPT : TYPE & INTERFACE&gt;</strong><hr><strong>&lt;SIGNIFICADO&gt;</strong>
+<strong>&lt;TYPESCRIPT : TYPE & INTERFACE&gt;</strong><hr><strong>&lt;CRIANDO TIPOS&gt;</strong>
+Podemos criar tipos com nomes unicos, pra que? para
+reduzir o tamanho do código, já que podemos armazenar
+até objetos de tipos e aproveitar tipos que serão reutilizados
+muitas vezes.
+
+Veja no exemplo abaixo como criar tipos ::
+
+<strong>type <mark>Nomes</mark> = string</strong> :: tipo Nomes criado definindo tipo string
+
+<strong>let meuNome: <mark>Nomes</mark> = 'André'</strong> ::
+Perceba que <strong>meuNome</strong> é do tipo <mark>Nomes</mark>, que é equivalente a string.<hr>Mais um exemplo ::
+<strong>
+type <mark>valorUtil</mark> = number | string;
+
+let dinheiro: <mark>valorUtil</mark> = 'R$: 100'
+</strong>
+:: Veja como definimos dinheiro com 2 tipos, mas utilizando
+apenas 1 nome de tipo, o que pode economizar muitas linhas...<hr><strong>&lt;TYPE & INTERFACE&gt;</strong>
+
+Agora veja em funções usando objetos como parâmetros ::
+<strong>
+function resumo(usuario<mark>:{nome:string, idade: number}</mark>){
+    return `Olá, ${usuario.nome}, você tem ${usuario.idade} anos.`
+}
+
+resumo({
+    nome: 'André',
+    idade: 90
+})
+</strong>
+:: Funcionará normalmente, mas olha como os parâmetros ocupam espaço
+na declaração da função... podemos resumir tipos de objetos de 2 maneiras ::
+<strong>
+type <mark>User</mark> = {
+    nome: string,
+    idade: number
+}</strong> :: essa não pode ser modificada durante o código
+
+ou
+<strong>
+interface <mark>User</mark> {
+    nome: string;
+    idade: number;
+}</strong> :: essa pode sim ser modificada durante o código<hr>Veja como ficaria a mesma função utilizando qualquer das 2 estruturas acima ::
+<strong>
+function resumo(usuario<mark>: User</mark>){
+    return `Olá, ${usuario.nome}, você tem ${usuario.idade} anos.`
+}</code>strong>
 
 </code>
 </pre>
