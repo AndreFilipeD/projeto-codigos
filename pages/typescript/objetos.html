@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : OBJETOS&gt; </strong><hr>Vamos considerar a função e o objeto abaixo ::
+
+<strong>function resumo(<mark>usuario:{nome: string, idade: number}</mark>){
+    return `Olá ${usuario.nome}, você tem ${usuario.idade} anos.`
+}
+
+let u = {
+    nome: 'andré',
+    idade: 90
+}</strong>
+
+Vamos receber um objeto para ser processado dentro da função resumo,
+mas perceba que para definir o tipo de cada parâmetro
+do objeto, precisamos meio que criar um objeto de parâmetros
+dentro da declaração da função (Destacado em amarelo<mark> </mark>)
+
+Dessa forma, ele já verifica cada item do objeto recebido,
+para ter certeza que os tipos estão corretos antes de compilar;<hr>E se idade fosse um parâmetro opcional? exemplo ::
+
+<strong>function resumo(usuario:{nome: string, idade<mark>?</mark
+    >: number}){
+
+    if(usuario.idade !== undefined){ //CASO TENHA
+        return `Olá ${usuario.nome}, você tem ${usuario.idade} anos.`
+    }else{ // CASO NÃO TENHA
+        return `Olá ${usuario.nome}, tudo bem?`
+    }
+    
+}</strong>
+
+:: Perceba o interrogação destacado em amarelo, ele diz que,
+pode ocorrer de a propriedade idade ser undefined,
+que não será considerado um problema, já que o codigo está
+preparado para isso.<hr>
+
+
+</code>
+</pre>
+</body>
+</html>

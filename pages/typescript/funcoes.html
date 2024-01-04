@@ -24,7 +24,17 @@ pois o processamento da função é feito sobre uma string. ex ::
 <strong>firstLetterUpperCase(<mark>90</mark>)</strong> :: erro
 
 Então, o <mark>: string</mark> inserido dentro da declaração da função acima
-previne que esse tipo de problema ocorra.<hr>
+previne que esse tipo de problema ocorra.<hr><strong>function somar(n1<mark>: number</mark>, n2<mark>: number</mark>)<mark>: number</mark>{
+    return n1 + n2
+}
+</strong>
+
+<strong>let resposta = somar(10,30)</strong> :: Perceba que temos 3 tipos
+<mark>: number</mark> definidos no inicio declaração da função;
+
+O terceiro <strong><mark>: number</mark></strong> se refere ao return da função, dizendo que
+o resultado de <strong>return</strong> também deve ser um numero, caso contrario
+ocorrerá um erro;
 </code>
 </pre>
 </body>
