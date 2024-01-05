@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : TYPE FUNÇÃO&gt; </strong><hr>Podemos facilitar muito a vida na hora de criar
+funções no typescript usando esse conceito ::
+
+<strong>type MathFunction = (n1<mark>: number</mark>, n2<mark>: number</mark>) => <mark>number</mark>;</strong>
+
+:: Vamos analisar essa estrutura.
+
+Criamos um tipo chamado MathFunction, e dizemos a ele que
+ele vai receber n1 tipo number e n2 tipo number, logo após,
+apontamos => para o retorno da função que já deve ser também
+um tipo number.
+
+Dessa forma, podemos criar as funções abaixo de maneira mais
+dinamica, confira ::
+<strong>
+const somar<mark>: MathFunction</mark> = (n1, n2) => {
+    return n1 + n2
+}
+
+const subtrair<mark>: MathFunction</mark> = (n1, n2) => {
+    return n1 - n2
+}
+
+const multiplicar<mark>: MathFunction</mark> = (n1, n2) => {
+    return n1 * n2
+}
+</strong>
+:: Muito melhor, não é? praticamente javascript puro dentro
+do typescript!
+
+</code>
+</pre>
+</body>
+</html>

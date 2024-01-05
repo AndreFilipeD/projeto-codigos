@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;TYPESCRIPT : TYPE LITERAL&gt; </strong><hr>E se por exemplo, o tipo de resultado especificamente 
+fosse apenas 3 possibilidades? se o retorno 
+só pudesse ser "small", "medium" ou "big"?
+bem especifico não é? Para isso temos os tipos literais ::
+
+<strong>function tamanhoElemento(
+    <mark>altura: 'small' | 'medium' | 'big'</mark>,
+    <mark>largura: 'small | 'medium' | 'big'</mark>){
+    </strong>... processamento case 'small medium big' > retorno
+<strong>}</strong>
+<hr>Podemos também criar o tipo para economizar espaço ::
+<strong>  
+interface SizeElement {
+    altura: 'small' | 'medium' | 'big';
+    largura: 'small' | 'medium' | 'big';
+}</strong>
+
+ou 
+<strong>    
+type SizeElement = {
+    altura: 'small' | 'medium' | 'big',
+    largura: 'small' | 'medium' | 'big'
+}
+</strong>
+
+:: o resultado da função ficaria assim ::
+
+<strong>function tamanhoElemento(<mark>props: SizeElement</mark>){
+    </strong>... processamento case 'small medium big' > retorno
+<strong>}</strong>
+
+</code>
+</pre>
+</body>
+</html>
