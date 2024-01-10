@@ -11,15 +11,47 @@
 <strong>&lt;REACT : IMPORTAR COMPONENTES&gt;</strong><hr>Componentes geralmente não são exportados com default,
 apenas a própria <strong>Page</strong> é exportada dessa forma.
 
+Considere agora um arquivo Geo.tsx, onde teremos os componentes
+<strong>Square</strong> e <strong>Circle</strong>
+
 Componentes podem ser exportados em sua própria inicialização ::
 <strong>
-export const Square = () => {
+export const <mark>Square</mark> = () => {
     return(
         &lt;div className="w-50 h-50 bg-orange-700 text-white"&gt;
             Quadradin
         &lt;/div&gt;
     )
-}</strong>
+}
+
+export const <mark>Circle</mark> = () => {
+    return(
+        &lt;div className="w-50 h-50 bg-orange-700 text-white rounded-full"&gt;
+            Circulin
+        &lt;/div&gt;
+    )
+}
+</strong><hr>E para importa-lo em <strong>Page</strong>, deve ser feito assim ::
+
+<strong>import {Square} from '@/components/Geo'</strong>
+
+Se houver mais de um, separe :: <strong>{Square, Circle}</strong><hr><strong>&lt;DEFAULT + COMPONENT&gt;</strong>
+Se por algum motivo você tiver que realizar um <strong>"default export"</strong> junto com
+um <strong>"componente export"</strong> em um mesmo arquivo, conforme exemplo abaixo ::
+
+const <mark>Square</mark> = () => {
+    return( ...data )
+}
+
+export const <mark>Circle</mark> = () => {
+    return( ...data )
+}
+
+export default <mark>Square</mark>;
+
+:: A importação no arquivo Page fica assim ::
+
+<strong>import Square, {Circle} from '@/components/Geo';</strong><hr>
 </code>
 </pre>
 </body>
