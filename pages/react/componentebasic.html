@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : COMPONENTE BASICO&gt;</strong><hr>Duas maneiras de criar um mesmo componente chamado <strong>Page</strong> ::
+
+function Page(){
+    return(
+      <strong>    &lt;div&gt;
+            &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+            &lt;h3&gt;Testando 123&lt;/h3&gt;
+          &lt;/div&gt;
+      </strong>);
+}
+
+:: ou ::
+
+const Page = () => {
+    return(
+      <strong>    &lt;div&gt;
+            &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+            &lt;h3&gt;Testando 123&lt;/h3&gt;
+          &lt;/div&gt;
+      </strong>);
+}
+
+:: O componente só pode ter um elemento principal, no caso
+estamos utilizando uma tag div, e ao final é exportado ::
+
+<strong>export default Page;</strong> :: para ser acessado no arquivo principal
+
+</code>
+</pre>
+</body>
+</html>
