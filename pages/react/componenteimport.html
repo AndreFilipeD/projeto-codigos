@@ -8,55 +8,18 @@
 <body>
     <pre>
         <code id="data">
-<strong>&lt;REACT : COMPONENTE BASICO&gt;</strong><hr>
-Abra o arquivo page em <strong>src > app</strong> e inicie :: 
-Duas maneiras de criar um mesmo componente chamado <strong>Page</strong> ::
+<strong>&lt;REACT : IMPORTAR COMPONENTES&gt;</strong><hr>Componentes geralmente não são exportados com default,
+apenas a própria <strong>Page</strong> é exportada dessa forma.
 
-function Page(){
+Componentes podem ser exportados em sua própria inicialização ::
+<strong>
+export const Square = () => {
     return(
-      <strong>    &lt;div&gt;
-            &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
-            &lt;h3&gt;Testando 123&lt;/h3&gt;
-          &lt;/div&gt;
-      </strong>);
-}
-
-:: ou ::
-
-const Page = () => {
-    return(
-      <strong>    &lt;div&gt;
-            &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
-            &lt;h3&gt;Testando 123&lt;/h3&gt;
-          &lt;/div&gt;
-      </strong>);
-}
-
-:: O componente só pode ter um elemento principal, no caso
-estamos utilizando uma tag div, e ao final é exportado ::
-
-<strong>export default Page;</strong> :: para ser acessado no arquivo principal<hr><strong>&lt;COMPONENTE INTERNO&gt;</strong>
-Crie uma pasta component dentro de src, e depois
-um arquivo Square.tsx e preencha-o ::
-
-const Square = () = >{
-    return(<strong>
-        &lt;div className="w-25 h-25 bg-orange-700 text-white"&gt;
-            Texto qualquer
-        &lt;/div&gt;</strong>
-    );
-}
-export default Square;
-<hr>Agora no arquivo <strong>Page</strong>, importe o <strong>Square</strong> na primeira linha assim ::
-import <strong>Quadrado</strong> from <strong>'@/components/Square'</strong>;
-
-:: <mark>@</mark> referencia ao próprio diretório do arquivo.
-
-dentro do componente <strong>Page</strong>, na div principal
-adcione na ultima linha :: <strong>&lt;Quadrado /&gt;</strong>
-
-PARABÉNS, você acaba de utilizar seu primeiro componente criado em REACT!<hr>
-
+        &lt;div className="w-50 h-50 bg-orange-700 text-white"&gt;
+            Quadradin
+        &lt;/div&gt;
+    )
+}</strong>
 </code>
 </pre>
 </body>
