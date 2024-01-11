@@ -30,7 +30,7 @@ de bloco igualmente a variavel let.
 <strong>let idade = 25</strong> :: escopo de bloco
 
 <strong>const gravidade = 9.807</strong> :: constante, escopo de bloco
-<hr><strong>&lt;CONVERSÃO&gt;</strong>
+<hr><strong>&lt;CONVERSÃO BASICA&gt;</strong>
 
 <strong>Number.parseInt(variavel)</strong> :: converte a variavel para inteiro.
 <strong>Number.parseFloat(variavel)</strong> :: converte a variavel para float.
@@ -42,6 +42,13 @@ de bloco igualmente a variavel let.
 <strong>variavel.toLocateString('pt-BR',{style:'currency',currency:'BRL'})</strong> ::
 Utiliza o padrão monetario Brasileiro na apresentação do valor;
 Use em <strong>'BRL'</strong> o <strong>'USD'</strong> para dolar, <strong>'EUR'</strong> para euro entre outros...
+<hr><strong>&lt;CONVERSÃO DECIMAL/HEXADECIMAL&gt;</strong>
+
+Convertendo valor decimal inteiro para hexadecimal String ::
+<strong>hexString = yourNumber.toString(16);</strong>
+
+Convertendo valor hexadecimal string para decimal Inteiro ::
+<strong>yourNumber = parseInt(hexString, 16);</strong>
 <hr>
 
 
