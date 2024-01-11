@@ -36,6 +36,7 @@ header{
     padding: 10px;
     outline: 1px solid black;
     text-align: center;
+    transition: 4s;
 }
 #title{
     font-size: 2em;
@@ -59,7 +60,7 @@ aside{
     font-weight: bolder;
     font-size: 1.2em;
     outline: 1px solid black;
-    background-color: rgb(73, 94, 73);
+    /*background-color: rgb(73, 94, 73);*/
     transition: 2s;
     padding: 5px 5px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.222) inset;
