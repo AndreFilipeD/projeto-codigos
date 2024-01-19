@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : PROPS&gt; </strong><hr><strong>&lt;O QUE É&gt;</strong>
+É a capacidade do React de criar componentes já construidos para
+a interface utilizando apenas um import e um nome correto?
+
+Ex ::
+<strong>&lt;Person/&gt;</strong><hr>Mas e se esse componente pudesse ser mais reaproveitado? e se
+pudessemos passar parâmetros diretamente em sua criação? é pra
+isso que serve os props.
+
+Ex ::
+<strong>&lt;Person 
+    name="elon musk"
+    avatar="https://wayimg.com/123"
+    roles={['CEO Tesla', 'CEO SpaceX']}
+/&gt;</strong>
+
+:: Uma vez tendo a estrutura abaixo de Person definido, basta
+sempre chamar o componente Person atribuindo os seus devidos
+valores internos que ele vai ser criado com dados diferentes.
+
+Ex da estrutura Person ::
+<strong>
+type <mark>Props</mark> = {
+    name: string;
+    avatar: string;
+    roles: string[];
+}
+
+export const Person = (props: <mark>Props</mark>) => {
+    &lt;&gt;
+
+        &lt;h1>props.name&lt;/h1>
+
+        &lt;img 
+            src={props.avatar}
+            alt={props.name}
+            className="w-40"
+        /&gt;
+
+        &lt;ul>
+            &lt;li>{props.roles[0]}&lt;/li>
+            &lt;li>{props.roles[1]}&lt;/li>
+        &lt;/ul>
+    
+    &lt;/&gt;
+}</strong>
+
+:: Perceba que o componente está acessando as propriedades de props
+onde recebe os dados como se fosse um objeto. Dados esse que vem
+da declaração de utilização do próprio componente
+
+</code>
+</pre>
+</body>
+</html>
