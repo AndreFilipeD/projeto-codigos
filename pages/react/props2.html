@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : PROPS 2&gt; </strong><hr><strong>&lt;PROPS AVANÇADO&gt;</strong>
+
+Ainda considerando o Person da parte 1 de Props, veja o exemplo
+de como melhorar o código, utilizando essa nova estrutura grifada
+em amarelo, onde na hora de adicionar os valores no JSX, não precisamos 
+acessar o <strong><mark>props.name</mark></strong>, e sim apenas o <strong><mark>name</mark></strong>, entre outros ::
+<strong>
+type Props = {
+    name: string;
+    avatar: string;
+    roles: string[];
+}
+
+export const Person = (props: Props) =&gt; {
+    <mark>
+    const { name, avatar, roles } = props;
+    //parte do exemplo mencionado</mark>
+
+    return{
+        &lt;&gt;
+
+            &lt;h1&gt;<mark>name</mark>&lt;/h1&gt;
+
+            &lt;img 
+                src={<mark>avatar</mark>}
+                alt={<mark>name</mark>}
+                className="w-40" //css
+            /&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;{<mark>roles[0]</mark>}&lt;/li&gt;
+                &lt;li&gt;{<mark>roles[1]</mark>}&lt;/li&gt;
+            &lt;/ul&gt;
+        
+        &lt;/&gt;
+    }
+}
+
+:: Mas podemos simplificar essa estrutura ainda mais, colocando
+esse const diretamente no export do componente conforme exemplo
+abaixo ::
+
+export const Person = (<mark>{name, avatar, roles}</mark>: Props) =&gt; {
+
+    return{
+        &lt;&gt;
+
+            &lt;h1&gt;<mark>name</mark>&lt;/h1&gt;
+
+            &lt;img 
+                src={<mark>avatar</mark>}
+                alt={<mark>name</mark>}
+                className="w-40" //css
+            /&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;{<mark>roles[0]</mark>}&lt;/li&gt;
+                &lt;li&gt;{<mark>roles[1]</mark>}&lt;/li&gt;
+            &lt;/ul&gt;
+        
+        &lt;/&gt;
+    }
+}
+</strong>
+
+</code>
+</pre>
+</body>
+</html>
