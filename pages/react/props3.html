@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : PROPS 3&gt; </strong><hr><strong>&lt;PROPS PADRÃO&gt;</strong>
+Podemos também adicionar valor inicial nas props definidos na aba
+Props 2, seguindo o exemplo abaixo ::
+
+<strong>
+    export const Person = ({
+        <mark>name='André'</mark>,
+        <mark>avatar='www.com.br/img'</mark>,
+        roles: Props) =&gt; {
+    
+        return{
+            &lt;&gt;
+    
+                &lt;h1&gt;name&lt;/h1&gt;
+    
+                &lt;img
+                    src={avatar}
+                    alt={name}
+                    className="w-40" //css
+                /&gt;
+    
+                &lt;ul&gt;
+                    &lt;li&gt;{roles[0]}&lt;/li&gt;
+                    &lt;li&gt;{roles[1]}&lt;/li&gt;
+                &lt;/ul&gt;
+    
+            &lt;/&gt;
+        }
+    }
+</strong>
+
+:: Lembrando que name e avatar estão recebendo como padrão 
+um valor, mas se no typescript, a declaração vazia não for opcional,
+obrigatoriamente terá que incluir alguma coisa, para resolver isso
+basta adicionar na declaração do tipo, no elemento name e avatar, como
+opcional.
+ ex ::
+
+<strong>
+    type Props = {
+        name<mark>?</mark>: string;
+        avatar<mark>?</mark>: string;
+        roles: string[];
+    }
+</strong>
+
+</code>
+</pre>
+</body>
+</html>
