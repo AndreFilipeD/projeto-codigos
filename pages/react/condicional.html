@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : CONDICIONAL&gt; </strong><hr><strong>&lt;DESCRIÇÃO&gt;</strong>
+Podemos utilizar condições na hora de renderizar o conteudo
+em react conforme os seguintes exemplos abaixo ::
+
+type Props = {
+    phase: string;
+    author?: string; <mark>//author está como opcional</mark>
+}
+
+export const Card = ({ <mark>phrase</mark>, <mark>author</mark>}: Props) => {
+    if(author) {
+        return(
+        &lt;&gt;
+            &lt;h3&gt;Frase: "{<mark>phrase</mark>}" &lt;/h3&gt;
+            &lt;p&gt;Autor: "{<mark>author</mark>}" &lt;/p&gt;
+        &lt;/&gt;   
+    );
+    }else{
+        return(
+        &lt;&gt;
+            &lt;h3&gt;Frase: "{<mark>phrase</mark>}" &lt;/h3&gt;
+            &lt;p&gt;Autor: <mark>"DESCONHECIDO"</mark> &lt;/p&gt;
+        &lt;/&gt;   
+    );
+    }
+}
+
+:: Veja como ele verifica se, ao ser criado o componente, foi
+informado algum author, if true, ele coloca o autor no local,
+if false, ele coloca <mark>DESCONHECIDO</mark>.
+
+Claro que foi um exemplo basico, mas podemos melhorar assim ::
+
+return(
+        &lt;&gt;
+            &lt;h3&gt;Frase: "{<mark>phrase</mark>}" &lt;/h3&gt;
+            &lt;p&gt;Autor: "{<mark>author</mark> ? author : <mark>"DESCONHECIDO"</mark>}" &lt;/p&gt;
+        &lt;/&gt;   
+);
+
+:: Utilizando condicional ternário, na mesma linha conseguimos
+estruturar essa substituição no caso do componente não receber
+o valor; mas dá pra ficar ainda melhor por incrivel que pareça...
+
+&lt;p&gt;Autor: "{<mark>author</mark> ?? <mark>"DESCONHECIDO"</mark>}" &lt;/p&gt;
+
+:: Com os 2 interrogações, ele faz exatamente a mesma coisa..
+De nada...
+</code>
+</pre>
+</body>
+</html>
