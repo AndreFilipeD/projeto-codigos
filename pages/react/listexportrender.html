@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT : LIST EXPORT RENDER&gt; </strong><hr><strong>&lt;DESCRIÇÃO&gt;</strong>
+Podemos exportar listas juntamente com seus tipos em arquivos
+separados, para que possamos renderiza-la posteriormente.
+
+Vamos começar sempre organizando os arquivos dentro da pasta
+<strong>src</strong>, criando dentro dela a pasta <strong>data</strong>, e dentro de data, o arquivo <strong><mark>peopleList.ts</mark></strong>
+
+Acessando o arquivo, vamos criar a seguinte lista ::
+<strong>
+<mark>export</mark> const peopleList = [
+    {id: 1, name: 'Fulano'},
+    {id: 2, name: 'Ciclano'},
+    {id: 3, name: 'Beltrano}'
+];</strong>
+
+:: Considerando que temos um arquivo principal dentro de app,
+faremos na primeira linha a seguinte importação ::
+
+<strong>import { peopleList } from '@/data/peopleList';</strong>
+
+:: Vamos criar mais uma pasta em <strong>src</strong> chamada <strong>types</strong>
+e dentro dela um arquivo chamado <strong>Person.ts</strong>
+contendo o seguinte conteudo ::
+<strong>
+export type Person = {
+    id: number;
+    name: string;
+}</strong>
+
+:: Voltando no arquivo <strong><mark>peopleList.ts</mark></strong> vamos importar os <strong><mark>tipos</mark></strong> ::
+
+<strong>
+<mark>export</mark> const peopleList<strong><mark>: Person[]</mark></strong> = [
+    {id: 1, name: 'Fulano'},
+    {id: 2, name: 'Ciclano'},
+    {id: 3, name: 'Beltrano}'
+];
+</strong>
+:: Voltando para o código principal, vamos renderizar a lista usando
+uma função do javascript chamada <strong><mark>map()</mark></strong> ::
+<strong>
+import { peopleList } from '@/data/peopleList';
+
+const Page = () => {
+    return (
+        &lt;div&gt;
+            &lt;h1 className="PeopleTitleList"&gt;Olá, Mundo!&lt;/h1&gt;
+            &lt;h3>Algum outro texto&lt;/h3&gt;
+
+            &lt;ul>
+                {<mark>peopleList.map(person =&gt; &lt;li&gt; {person.name} &lt;/li&gt;)</mark>}
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    )
+}</strong>
+
+</code>
+</pre>
+</body>
+</html>
