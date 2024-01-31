@@ -32,6 +32,9 @@ function clean(){
     window.document.querySelector("#react").style="none"
     cleaner.style='display: none'
     cleaner = window.document.querySelector('.i')
+    window.document.querySelector("#reacss").style="none"
+    cleaner.style='display: none'
+    cleaner = window.document.querySelector('.j')
     window.document.querySelector("#notas").style="none"
     cleaner.style='display: none'
 }
@@ -111,9 +114,18 @@ function menu(c){
             window.document.querySelector("#react").style=`box-shadow:0px 0px 30px #${color};`
             storage = window.document.getElementsByClassName("itreact")
             break;
-        case 9:// MOSTRAR NOTAS
-            color="464646"
+        case 9:// MOSTRAR REACT + CSS
+            color="0059ff"
             cleaner = window.document.querySelector('.i')//9
+            cleaner.style='display: flex'
+            actual = "REACT + CSS"
+            window.document.querySelector("#showContent").style=`background-color: #${color};`
+            window.document.querySelector("#reacss").style=`box-shadow:0px 0px 30px #${color};`
+            storage = window.document.getElementsByClassName("itreacss")
+            break;
+        case 10:// MOSTRAR NOTAS
+            color="464646"
+            cleaner = window.document.querySelector('.j')//9
             cleaner.style='display: flex'
             actual = "NOTAS"
             window.document.querySelector("#showContent").style=`background-color: #${color};`
@@ -131,6 +143,7 @@ function applyIndex(){
     */
     window.document.querySelector("#cont").style=`box-shadow:-15px -5px 10px #${color}dd inset;`
     window.document.querySelector("#showContent").innerHTML=actual
+    //window.document.querySelector("#menu").style=`background-color: #${color};`
     for(c in storage){
         storage[c].setAttribute('onclick',`uploadName("${storage[c].innerHTML}","${c}")`)
         storage[c].style=""
