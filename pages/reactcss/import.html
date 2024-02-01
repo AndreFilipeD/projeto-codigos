@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução</title>
+</head>
+<body>
+    <pre>
+        <code id="data">
+<strong>&lt;REACT + CSS: IMPORT&gt; </strong><hr><strong>&lt;SOBRE&gt;</strong>
+
+:: Como já esperado, o ideal é sempre se organizar e fazer uma pasta
+para realizar a crição de seus arquivos CSS, vamos utilizar o <mark>App.css</mark>
+como exemplo, que se encontra em src > components, onde está o arquivo
+principal <mark>App.js ou App.ts</mark>.
+
+Basta importar o arquivo css conforme exemplo abaixo dentro do código
+principal ::
+
+<strong>import "./App.css"</strong>
+
+Lembrando que se os estilos dos componentes estiverem nesse arquivo,
+por se tratar do arquivo fonte do projeto, não será necessario
+importar o mesmo arquivo em cada componente, apenas caso queira se
+organizar de tal maneira em que cada componente especifico tenha sua
+folha de estilo;
+
+Considere o seguinte estilo dentro do documento css ::
+<strong>
+.texto{
+    font-size: 2em;
+    color: green;
+    background-color: red;
+}</strong>
+
+::
+
+Agora para utilizar o estilo em React, devemos incluir sua ClassName ::
+
+<strong>&lt;h1 <mark>className="texto"</mark>&gt;Texto de exemplo&lt;/h1&gt;</strong>
+
+</code>
+</pre>
+</body>
+</html>
